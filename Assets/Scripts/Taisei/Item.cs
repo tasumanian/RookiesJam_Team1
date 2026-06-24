@@ -5,10 +5,17 @@ using System.Collections.Generic;
 
 public class Item : ScriptableObject
 {
+    //識別番号
+    [SerializeField]
+    private int identifier;
+    public int Identifier
+    {
+        get { return identifier; }
+    }
     //名前
     [SerializeField]
     private string itemName;
-    public string ItemName
+    public string ItemName 
     {
         get { return itemName; }
     }
