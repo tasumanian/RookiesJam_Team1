@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 2
   itemName: inu
+  info: iiiiinnnu
   visual: {fileID: 0}
   attribute: 0

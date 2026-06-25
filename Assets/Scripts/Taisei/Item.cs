@@ -20,6 +20,12 @@ public class Item : ScriptableObject
         get { return itemName; }
     }
     [SerializeField]
+    private string info;
+    public string Info
+    {
+        get { return info; }
+    }
+    [SerializeField]
     private Sprite visual;
     public Sprite Visual
     {

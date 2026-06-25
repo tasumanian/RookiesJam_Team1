@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 4
   itemName: kizi
+  info: kiiiiizi
   visual: {fileID: 0}
   attribute: 0

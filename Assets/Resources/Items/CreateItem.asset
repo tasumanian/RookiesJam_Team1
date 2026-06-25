@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CreateItem
   m_EditorClassIdentifier: 
   identifier: 1111
-  itemName: 
+  itemName: hoge
   visual: {fileID: 0}
   attribute: 0
   materialItems: []

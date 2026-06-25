@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 1
   itemName: neko
+  info: nekkkko
   visual: {fileID: 0}
   attribute: 0
