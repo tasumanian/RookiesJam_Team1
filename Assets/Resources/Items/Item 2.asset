@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
   m_Name: Item 2
   m_EditorClassIdentifier: 
-  identifier: 0
+  identifier: 3
   itemName: saru
   visual: {fileID: 0}
   attribute: 0

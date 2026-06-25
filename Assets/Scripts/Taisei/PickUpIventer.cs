@@ -6,6 +6,9 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
 {
     [SerializeField]
     Ivent ivent;
+
+    [SerializeField]
+    BackPack backPack;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -24,6 +27,8 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
     {
         //イベント実行
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
+        backPack.AddItem(ivent.GetItem);
+
     }
 
 }
