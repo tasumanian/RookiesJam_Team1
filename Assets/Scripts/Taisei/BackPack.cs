@@ -29,7 +29,7 @@ public class BackPack : MonoBehaviour
         Item[] itemData = Resources.LoadAll<Item>("Items");
         foreach (Item item in itemData)
         {
-            int score = PlayerPrefs.GetInt(item.Identifier.ToString(), 0);
+            int score = PlayerPrefs.GetInt(item.Identifier, 0);
             if (score == 1) //持っている場合
             {
                 AddItem(item);

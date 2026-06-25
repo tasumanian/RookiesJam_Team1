@@ -7,8 +7,8 @@ public class Item : ScriptableObject
 {
     //識別番号
     [SerializeField]
-    private int identifier;
-    public int Identifier
+    private string identifier;
+    public string Identifier
     {
         get { return identifier; }
     }
