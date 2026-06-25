@@ -1,33 +1,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveData : ScriptableObject
+public class SaveData : MonoBehaviour
 {
-    [SerializeField]
-    private List<Item> backPack;
-    public List<Item> BackPack
+    public static void AddItem(Item item)
     {
-        get { return backPack; }
+        //1は所持していることを表す
+        PlayerPrefs.SetInt(item.Identifier.ToString(),1);
     }
-    public void AddItem(Item item)
+    public static void RemoveItem(Item item)
     {
-        backPack.Add(item);
+        PlayerPrefs.DeleteKey(item.Identifier.ToString());
     }
-    public void RemoveItem(Item item)
+    public static void SetProgress(int progress)
     {
-        backPack.Remove(item);
+        PlayerPrefs.SetInt("progress", progress);
     }
-    [SerializeField]
-    private Scene nowScene;
-    public Scene NowScene
+    public void MemoSave(string memo)
     {
-        get { return nowScene; }
+        PlayerPrefs.SetString("Memo", memo);
     }
-public enum Scene
-{
-    tutorial,
-    search1,
-    search2,
-    judge
-}
 }

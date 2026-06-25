@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9eed3e833da4fe498e272f12854d0b8, type: 3}
-  m_Name: CreateItem
+  m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
+  m_Name: Item 3
   m_EditorClassIdentifier: 
-  identifier: 0
-  itemName: 
+  identifier: 4
+  itemName: kizi
   visual: {fileID: 0}
   attribute: 0
-  materialItems: []
