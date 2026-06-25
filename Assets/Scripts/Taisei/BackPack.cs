@@ -5,7 +5,16 @@ public class BackPack : MonoBehaviour
 {
     [SerializeField]
     private List<Item> itemList = new List<Item>();
+    [SerializeField]
+    private List<GameObject> itemUIList = new List<GameObject>();
 
+    [SerializeField]
+    private GameObject itemUIPrefab;
+
+    [SerializeField]
+    private GameObject itemMenu;
+    [SerializeField]
+    private GameObject detailMenu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,10 +40,25 @@ public class BackPack : MonoBehaviour
     {
         itemList.Add(item);
         SaveData.AddItem(item);
+
+        GameObject ui = Instantiate(itemUIPrefab, itemMenu.transform);
+        itemUIList.Add(ui);
+        ui.GetComponent<ItemUI>().Initializae(item, detailMenu);
     }
     public void RemoveItem(Item item)
     {
         itemList.Remove(item);
         SaveData.RemoveItem(item);
+
+        for(int i = 0; i < itemUIList.Count;i++)
+        {
+            if(itemUIList[i].GetComponent<ItemUI>().item == item)
+            {
+                GameObject obj = itemUIList[i];
+                itemUIList.Remove(obj);
+                Destroy(obj);
+                break;
+            }
+        }
     }
 }

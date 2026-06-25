@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 3
   itemName: saru
+  info: sarrrru
   visual: {fileID: 0}
   attribute: 0
