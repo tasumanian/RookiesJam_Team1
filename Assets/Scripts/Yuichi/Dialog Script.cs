@@ -115,6 +115,7 @@ public class Dialog : MonoBehaviour
     //追加点
     public void TextSet(string text)
     {
+
         //ログ表示などをするならListのほうがいいかも
         msgTexts[currentTextIndex] = text;
 
