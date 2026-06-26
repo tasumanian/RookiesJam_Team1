@@ -115,6 +115,8 @@ public class Dialog : MonoBehaviour
     //追加点
     public void TextSet(string text)
     {
+        //実行中のコルーチンを停止(ログを出すなら停止したのちに残りtextを追加)
+        StopAllCoroutines();
 
         //ログ表示などをするならListのほうがいいかも
         msgTexts[currentTextIndex] = text;
