@@ -44,6 +44,9 @@ public class Dialog : MonoBehaviour
     IEnumerator TypeDisplay()
     //時間差で文字を出す台本
     {
+
+        DialogText.text = ""; //ログを見れるようにするなら変更するべし
+
         foreach (char item in msgText.ToCharArray())
         // 用意した文章を1文字ずつに分解して順番に処理する。
         {
@@ -58,9 +61,12 @@ public class Dialog : MonoBehaviour
     //追加点
     public void TextSet(string text)
     {
-        DialogText.text = ""; //ログを見れるようにするなら変更するべし
+        //現在実行中の子ルーチンを停止
+        StopAllCoroutines();
 
+        button.SetActive(false);
         msgText = text;
+
         StartCoroutine(TypeDisplay());
     }
 }

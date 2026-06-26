@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ivent
   m_EditorClassIdentifier: 
   identifier: 0
-  content: neko
+  content: "\u3064\u304F\u3048\u306E\u4E0B\u3092\u8ABF\u3079\u305F\u3001\u3001\n\u306D\u3053\u3092\u307F\u3064\u3051\u305F\uFF01"
   getItem: {fileID: 11400000, guid: d19d0c62dbf635644ad4bef8892806ff, type: 2}
