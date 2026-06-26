@@ -15,5 +15,7 @@ MonoBehaviour:
   identifier: 4
   itemName: kizi
   info: kiiiiizi
-  visual: {fileID: 0}
-  attribute: 0
+  visual: {fileID: -1232194625581636379, guid: 2df81cbd5064be54587546fd372fe10e, type: 3}
+  attribute: 5
+  materialAItem: {fileID: 0}
+  materialBItem: {fileID: 0}

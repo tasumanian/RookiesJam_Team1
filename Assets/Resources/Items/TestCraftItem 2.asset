@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
-  m_Name: Item 1
+  m_Name: TestCraftItem 2
   m_EditorClassIdentifier: 
-  identifier: 2
-  itemName: inu
-  info: iiiiinnnu
-  visual: {fileID: 0}
-  attribute: 0
+  identifier: 5
+  itemName: syakee
+  info: ueeeei
+  visual: {fileID: 3542951962486051089, guid: 66af881feae5568449c39280bd399a24, type: 3}
+  attribute: 5
+  materialAItem: {fileID: 11400000, guid: d19d0c62dbf635644ad4bef8892806ff, type: 2}
+  materialBItem: {fileID: 11400000, guid: 186fa6e056b6fee4eab07fc8a83c2bf0, type: 2}

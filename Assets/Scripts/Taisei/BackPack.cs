@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using static UnityEditor.Progress;
 
 public class BackPack : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class BackPack : MonoBehaviour
     private GameObject itemMenu;
     [SerializeField]
     private GameObject detailMenu;
+
+    [SerializeField]
+    private CreateItemMenu createMenu;
+
+    private bool isCustom = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,7 +50,7 @@ public class BackPack : MonoBehaviour
 
         GameObject ui = Instantiate(itemUIPrefab, itemMenu.transform);
         itemUIList.Add(ui);
-        ui.GetComponent<ItemUI>().Initializae(item, detailMenu);
+        ui.GetComponent<ItemUI>().Initializae(item, this);
     }
     public void RemoveItem(Item item)
     {
@@ -60,5 +67,27 @@ public class BackPack : MonoBehaviour
                 break;
             }
         }
+    }
+    public void DetailSet(Item item)
+    {   
+        if(isCustom)
+        {
+            createMenu.SetCreateItem(item);
+            return;
+        }
+        if (detailMenu == null) return;
+
+        Transform backscreenTf = detailMenu.transform.GetChild(0);
+        ItemUI itemUI = backscreenTf.GetChild(0).GetComponent<ItemUI>();
+        itemUI.Initializae(item, null);
+        var info = backscreenTf.GetChild(1).GetComponent<TextMeshProUGUI>();
+        info.text = item.Info;
+        detailMenu.SetActive(true);
+    }
+    public void ToggleCreateMenu()
+    {
+        isCustom = !isCustom;
+
+        createMenu.gameObject.SetActive(isCustom);
     }
 }
