@@ -111,4 +111,13 @@ public class Dialog : MonoBehaviour
         isTextComplete = true;
         // 自力で最後まで出し終わったので、ここでもスイッチをONにする。
     }
+    
+    //追加点
+    public void TextSet(string text)
+    {
+        //ログ表示などをするならListのほうがいいかも
+        msgTexts[currentTextIndex] = text;
+
+        StartNewDialog();
+    }
 }
