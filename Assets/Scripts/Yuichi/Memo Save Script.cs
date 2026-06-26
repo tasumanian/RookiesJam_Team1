@@ -14,6 +14,9 @@ public class MemoSaveScript : MonoBehaviour
 
         text = text.GetComponent<TextMeshProUGUI>();
         //表示用テキストのオブジェクトから、TextMeshProのコンポーネントを認識させる。
+
+        //追加点
+        text.text = PlayerPrefs.GetString("Memo", "");
     }
 
     void Update()
@@ -41,6 +44,9 @@ public class MemoSaveScript : MonoBehaviour
 
         text.text = inputField.text;
         //入力欄に打ち込まれた全ての文字を、そのまま画面上の表示用テキストに上書きコピーします。
+
+        //追加点
+        SaveData.MemoSave(inputField.text);
 
         Debug.Log("aaa" + inputField.text);
         //文字が保存・反映されたタイミングでUnityのコンソール画面に「aaa＋実際の文字」をログ出力する。
