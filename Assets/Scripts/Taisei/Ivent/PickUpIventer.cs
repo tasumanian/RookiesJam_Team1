@@ -1,3 +1,4 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
 
     [SerializeField]
     BackPack backPack;
+
+    [SerializeField]
+    Dialog dialog;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -29,6 +33,9 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
         backPack.AddItem(ivent.GetItem);
 
+        dialog.TextSet(ivent.Content);
+
+        gameObject.SetActive(false);
     }
 
 }

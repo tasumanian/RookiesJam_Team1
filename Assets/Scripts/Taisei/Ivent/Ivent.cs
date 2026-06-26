@@ -10,6 +10,7 @@ public class Ivent : ScriptableObject
         get { return identifier; }
     }
     [SerializeField]
+    [TextArea(5, 5)]
     private string content;
     public string Content
     {

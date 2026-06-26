@@ -96,7 +96,10 @@ public class Dialog : MonoBehaviour
 
     IEnumerator TypeDisplay()
     {
-        foreach (char item in msgTexts[currentTextIndex].ToCharArray())
+
+        DialogText.text = ""; //ログを見れるようにするなら変更するべし
+
+        foreach (char item in msgText.ToCharArray())
         // 用意した文章を1文字ずつに分解して順番に処理する。
         {
             DialogText.text += item;
@@ -105,10 +108,17 @@ public class Dialog : MonoBehaviour
             // 次の文字を出すまで、0.1秒だけ待つ。
         }
         button.SetActive(true);
-        // 最後まで文字が出し終わったら逆三角ボタンを表示する。
-        skipGuideScript.ShowNextGuide();
-        // 読み終わったので案内表示を「つぎへ」に変えてもらう。
-        isTextComplete = true;
-        // 自力で最後まで出し終わったので、ここでもスイッチをONにする。
+        // 最後まで文字が出し終わったらボタンを表示する。
+    }
+    //追加点
+    public void TextSet(string text)
+    {
+        //現在実行中の子ルーチンを停止
+        StopAllCoroutines();
+
+        button.SetActive(false);
+        msgText = text;
+
+        StartCoroutine(TypeDisplay());
     }
 }
