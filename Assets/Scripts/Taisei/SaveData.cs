@@ -10,14 +10,17 @@ public class SaveData : MonoBehaviour
     }
     public static void RemoveItem(Item item)
     {
+        //アイテムを削除
         PlayerPrefs.DeleteKey(item.Identifier);
     }
-    public static void SetProgress(int progress)
+    public static void SaveProgress(int progress)
     {
+        //進捗状況を保存
         PlayerPrefs.SetInt("progress", progress);
     }
-    public void MemoSave(string memo)
+    public static void MemoSave(string memo)
     {
+        //メモ帳を保存
         PlayerPrefs.SetString("Memo", memo);
     }
 }

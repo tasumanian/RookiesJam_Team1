@@ -55,4 +55,12 @@ public class Dialog : MonoBehaviour
         button.SetActive(true);
         // 最後まで文字が出し終わったらボタンを表示する。
     }
+    //追加点
+    public void TextSet(string text)
+    {
+        DialogText.text = ""; //ログを見れるようにするなら変更するべし
+
+        msgText = text;
+        StartCoroutine(TypeDisplay());
+    }
 }

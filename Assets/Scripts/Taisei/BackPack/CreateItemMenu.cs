@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class CreateItemMenu : MonoBehaviour
 {
     [SerializeField]
-    private ItemUI Aitem;
+    private ItemUI Aitem; //選択アイテムA
     [SerializeField]
-    private ItemUI Bitem;
+    private ItemUI Bitem;　//選択アイテムB
     [SerializeField]
-    private ItemUI CreatedItem;
+    private ItemUI CreatedItem;　//完成アイテム
     [SerializeField]
     private Button button;
     [SerializeField]
@@ -40,6 +40,13 @@ public class CreateItemMenu : MonoBehaviour
                 CreatedItem.gameObject.SetActive(true);
 
                 button.onClick.AddListener(() => backpack.AddItem(item));
+                button.onClick.AddListener(() => CreatedItem.RemoveDetail());
+
+                //アイテム削除
+                backpack.RemoveItem(Aitem.item);
+                Aitem.RemoveDetail();
+                backpack.RemoveItem(Bitem.item);
+                Bitem.RemoveDetail();
 
                 return;
             }

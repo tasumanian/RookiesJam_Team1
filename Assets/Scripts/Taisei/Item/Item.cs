@@ -19,18 +19,23 @@ public class Item : ScriptableObject
     {
         get { return itemName; }
     }
+
+    //詳細情報
     [SerializeField]
     private string info;
     public string Info
     {
         get { return info; }
     }
+
+    //見た目
     [SerializeField]
     private Sprite visual;
     public Sprite Visual
     {
         get { return visual; }
     }
+
     //属性
     [SerializeField]
     private Attribute attribute;
@@ -38,12 +43,16 @@ public class Item : ScriptableObject
     {
         get { return attribute; }
     }
+
+    //クラフト素材A(クラフトしないなら設定しない)
     [SerializeField]
     private Item materialAItem;
     public Item MaterialAItem
     {
         get { return materialAItem; }
     }
+
+    //クラフト素材B(クラフトしないなら設定しない)
     [SerializeField]
     private Item materialBItem;
     public Item MaterialBItem
