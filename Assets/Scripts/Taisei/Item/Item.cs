@@ -38,6 +38,18 @@ public class Item : ScriptableObject
     {
         get { return attribute; }
     }
+    [SerializeField]
+    private Item materialAItem;
+    public Item MaterialAItem
+    {
+        get { return materialAItem; }
+    }
+    [SerializeField]
+    private Item materialBItem;
+    public Item MaterialBItem
+    {
+        get { return materialBItem; }
+    }
 }
 
 //アイテムの属性
@@ -48,6 +60,7 @@ public enum Attribute
     hige,
     huge,
     hege,
-    hoge
+    hoge,
+    creation
 
 }
