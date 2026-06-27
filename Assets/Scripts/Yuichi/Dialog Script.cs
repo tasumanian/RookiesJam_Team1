@@ -1,26 +1,33 @@
 using System.Collections;
+using System.Collections.Generic; // リスト（List）を使うために必要な新しい部品。
 using UnityEngine;
 using TMPro;
 
 public class Dialog : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI DialogText;
-    // セリフのテキスト枠を登録する場所。
+    // 画面のテキスト枠を登録する場所。
     [SerializeField] private GameObject button;
-    // 逆三角が入っているボタンを登録する場所。
+    // 進行用の逆三角ボタンを登録する場所。
     [SerializeField] private SkipGuideScript skipGuideScript;
-    // 案内用テキストのスクリプトを登録する場所。
+    // スキップガイドスクリプトを登録する場所。
+
+    [SerializeField] private TextMeshProUGUI NameText;
+    // 名前用のテキスト枠を登録する場所。
 
     [TextArea(5, 5)]
-    [SerializeField] private string[] msgTexts;
-    // これから作る複数のセリフを入れておくリストの箱。
+    [SerializeField] private List<string> msgTexts = new List<string>();
+    // 文字が入るたびに、自動で引き出しが増えるセリフの箱。
+
+    [SerializeField] private List<string> speakerNames = new List<string>();
+    // セリフに合わせて自動で引き出しが増える名前の箱。
 
     private int currentTextIndex = 0;
-    // 今何番目のセリフを読んでいるか数えるカウンター。
+    // 今何番目のセリフを読んでいるかを数えるカウンター。
     private float msgSpeed = 0.1f;
     // 文字が出るスピード（0.1秒）。
     private bool isTextComplete = false;
-    // 文字が最後まで出終わったかを記録するスイッチ。
+    // 文字が出終わった状態にするためのスイッチ。
 
     void Start()
     {
@@ -39,16 +46,15 @@ public class Dialog : MonoBehaviour
             // もしスペースキーが押されたら。
             {
                 StopAllCoroutines();
-                // 文字を出すタイピング演出を強制終了する。
+                // 文字を出すタイピング演出（コルーチン）を強制終了する。
                 DialogText.text = msgTexts[currentTextIndex];
                 // メッセージを一瞬で全表示する。
                 button.SetActive(true);
                 // 隠していた逆三角ボタンを表示する。
-
                 skipGuideScript.ShowNextGuide();
                 // 案内表示を「クリックしてつぎへ」に変更。
                 isTextComplete = true;
-                // タイピング演出が終わったことを記録する。
+                // 文字が出終わった状態にする。
             }
         }
         else
@@ -59,17 +65,20 @@ public class Dialog : MonoBehaviour
             {
                 currentTextIndex++;
                 // カウンターを1つ進めて、次の文章の番号にする。
-                if (currentTextIndex < msgTexts.Length)
+
+                if (currentTextIndex < msgTexts.Count)
                 // もし次の文章がまだリストに残っているなら。
                 {
                     StartNewDialog();
                     // 次の文章を表示する処理をもう一度おこなう。
                 }
                 else
-                // もう次の文章が残っていない（会話が全部終わった）なら。
+                // 会話が全部終わったなら。
                 {
                     DialogText.text = "";
                     // 画面のセリフを消して空にする。
+                    NameText.text = "";
+                    // 画面の名前も消して空にする。
                     button.SetActive(false);
                     // 逆三角ボタンを隠す。
                     skipGuideScript.ShowEndGuide();
@@ -81,6 +90,9 @@ public class Dialog : MonoBehaviour
 
     void StartNewDialog()
     {
+        if (msgTexts.Count == 0) return;
+        // リストの中身が空っぽなら、エラーを防ぐために処理をスルーする。
+
         isTextComplete = false;
         // 新しい文章なので、まだ出終わっていない状態にする。
         DialogText.text = "";
@@ -88,13 +100,21 @@ public class Dialog : MonoBehaviour
         button.SetActive(false);
         // 逆三角ボタンを新しく隠し直す設定。
 
+        if (currentTextIndex < speakerNames.Count)
+        // 次の番号の名前が登録されていれば。
+        {
+            NameText.text = speakerNames[currentTextIndex];
+            // 名前用のテキスト枠を書き換える。
+        }
+
         skipGuideScript.ShowSkipGuide();
-        // 案内表示を最初の「スキップ」に戻してもらう。
+        // 案内表示を最初のスキップに戻してもらう。
         StartCoroutine(TypeDisplay());
         // 新しいセリフのタイピング演出をスタートさせる。
     }
 
     IEnumerator TypeDisplay()
+    // 時間差で文字を出すコルーチンの台本
     {
         foreach (char item in msgTexts[currentTextIndex].ToCharArray())
         // 用意した文章を1文字ずつに分解して順番に処理する。
@@ -111,16 +131,23 @@ public class Dialog : MonoBehaviour
         isTextComplete = true;
         // 自力で最後まで出し終わったので、ここでもスイッチをONにする。
     }
-    
-    //追加点
-    public void TextSet(string text)
-    {
-        //実行中のコルーチンを停止(ログを出すなら停止したのちに残りtextを追加)
-        StopAllCoroutines();
 
-        //ログ表示などをするならListのほうがいいかも
-        msgTexts[currentTextIndex] = text;
+    public void TextSet(string text)
+    // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
+    {
+        StopAllCoroutines();
+        // 動いているタイピング演出（コルーチン）をすべて停止する。
+
+        msgTexts.Add(text);
+        // 引数の文字列をセリフ用リストの末尾に追加。
+
+        speakerNames.Add("");
+        // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
+
+        currentTextIndex = msgTexts.Count - 1;
+        // カウンターを最後尾の要素番号に設定。
 
         StartNewDialog();
+        // 上書きした文章で、新しく会話の演出をスタートさせる。
     }
 }
