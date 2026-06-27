@@ -1,6 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 public class AriaMove : MonoBehaviour
 {
     [SerializeField]
@@ -8,6 +9,9 @@ public class AriaMove : MonoBehaviour
 
     [SerializeField]
     List<Button> ButtonList;
+
+    [SerializeField]
+    Animation ani;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,8 +19,14 @@ public class AriaMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    IEnumerator WaitAnimation()
     {
-        
+        //
+        yield return new WaitForSeconds(1f);
+
+    }
+    public void ChangeAria(int index)
+    {
+        StartCoroutine(WaitAnimation());
     }
 }

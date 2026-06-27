@@ -1,0 +1,346 @@
+/*メニュ－ボタン系
+-------------------------------------*/
+.menu_item {
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+}
+
+.menu_item img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	margin-right: 10px;
+}
+
+/* セーブ */
+.menu_save {
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 240px;
+	left: 80px;
+}
+
+/* ロード */
+.menu_load {
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 330px;
+	left: 306px;
+}
+
+/* テキスト消去 */
+.menu_window_close {
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 240px;
+	left: 530px;
+}
+
+/* メッセージスキップ */
+.menu_skip {
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 330px;
+	left: 754px;
+}
+
+/* タイトルに戻る */
+.menu_back_title {
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top:  240px;
+	left: 978px;
+}
+
+
+/* バックログ画面の設定
+--------------------------------------*/
+.log_body {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 900px;
+	height: 400px;
+	margin: 0;
+	padding: 0 60px 0 20px;
+	border: none;
+	border-radius: none;
+	color: #DDDDDD;
+	background: none;
+	font-weight: normal;
+	text-align: left;
+	line-height: 1.6em;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-sizing: border-box;
+}
+
+/* スクロールバー */
+.log_body::-webkit-scrollbar {
+	width: 12px;
+}
+.log_body::-webkit-scrollbar-thumb {
+	border-radius: none;
+	background: rgb(255 255 255 / .2);
+}
+
+.log_body::-webkit-scrollbar-track {
+	background: rgb(255 255 255 / .05);
+	border: 1px solid #444;
+}
+
+
+/* セーブ・ロード画面の設定
+--------------------------------------*/
+.area_save_list {
+	display: block;
+	width: 900px;
+	height: 440px;
+	margin: 180px 0 0 5px;
+	padding-left: 20px;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+/* スクロールバー */
+.area_save_list::-webkit-scrollbar {
+	width: 12px;
+}
+
+.area_save_list::-webkit-scrollbar-thumb {
+	border-radius: none;
+	background: rgb(255 255 255 / .2);
+}
+
+.area_save_list::-webkit-scrollbar-track {
+	background: rgb(255 255 255 / .05);
+	border: 1px solid #444;
+}
+
+
+/* セーブデータリスト全体の設定 */
+.save_list {
+	display: table;
+	table-layout: fixed;
+	position: absolute;
+	width: 840px;
+	height: 122px;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: normal;
+	background-color: none;
+	border: none;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+	box-sizing: border-box;
+}
+
+/* セーブデータの設定 */
+.save_list_item {
+	display:table-row;
+	width: 840px;
+	height: 122px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.save_list_item:hover > .save_list_item_thumb{
+	background: url('../image/system/saveslot2.png');
+	background-repeat: y-repeat;
+	background-position: left top;
+	background-color: none;
+}
+
+.save_list_item:hover > .save_list_item_area{
+	background: url('../image/system/saveslot2.png');
+	background-repeat: y-repeat;
+	background-position: right top;
+	background-color: none;
+}
+
+.save_list_item:hover {
+	background: none;
+}
+
+/* セーブデータのサムネイル部分の設定 */
+.save_list_item_thumb {
+	display: table-cell;
+	width: 220px;
+	height: 122px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: url('../image/system/saveslot.png');
+	background-repeat: y-repeat;
+	background-position: left top;
+	box-sizing: border-box;
+}
+
+/* サムネイル画像の設定 */
+.save_list_item_thumb img {
+	width: 160px;
+	height: 90px;
+	margin: 15px 13px 0 0;
+	padding: 0;
+	border: none;
+	border-radius: 0px;
+}
+
+/* セーブデータのテキスト部文の設定 */
+.save_list_item_area {
+	display: table-cell;
+	width: 620px;
+	height: 122px;
+	padding: 20px 30px 0 0;
+	border-radius: none;
+	border: none;
+	background: url('../image/system/saveslot.png');
+	background-repeat: y-repeat;
+	background-position: right top;
+	text-align: left;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+/* セーブデータの日付の設定 */
+.save_list_item_date {
+	display: block;
+	margin: 0;
+	padding: 0 0 0 20px;
+	height: 20px;
+	line-height: 1;
+	color: #EEEEEE;
+	font-size: 15px;
+	font-weight: normal;
+	box-sizing: border-box;
+}
+
+/* セーブデータのテキストの設定 */
+.save_list_item_text {
+	display: block;
+	height: 65px;
+	margin: 0;
+	padding: 10px 40px 20px 20px;
+	line-height: 1.3;
+	color: #CCCCCC;
+	font-size: 16px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.layer_event_click{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.layer{
+	background-size: 100% 100%;
+}
+
+.button_menu{
+	position: absolute;
+	z-index: 99999;
+	cursor: pointer;
+}
+
+/*glinkの設定
+--------------------------------------------- */
+.bth05 {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: .55em .55em;
+	background: rgb(0 0 0 / .5);
+	color: #FFF;
+	text-shadow: 0 2px 0 #141414;
+	border-radius: 0;
+	border: 1px solid #141414;
+	box-shadow: 0 4px 0 #141414;
+	box-sizing: border-box;
+	transition: .1s ease-in-out;
+}
+
+.bth05:hover {
+	color: #FFFFFF;
+	background: rgb(114 31 30 / .8);
+}
+
+.bth05:active {
+	color: #FF5452;
+	background: #141414;
+	box-shadow: none;
+	border-color: #FF5452;
+	transform: translateY(4px);
+}
+
+/* modalwindow-color
+--------------------------------------------- */
+/* base */
+.remodal {
+	color: #F1F1F1;
+	background: #141414;
+	outline: 1px solid #333;
+	outline-offset: -6px;
+	box-shadow: 6px 6px 0 0 #992e35;
+	box-sizing: border-box;
+}
+
+/* button-OK */
+.remodal-confirm {
+	color: #FFF;
+	background: #992e35;
+	border: none;
+	transition: .1s;
+}
+
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+	color: #FFF;
+	background: #bf3942;
+	border: none;
+	transform: translateY(-2px);
+}
+
+/* button-cancel */
+.remodal-cancel {
+	color: #FFF;
+	background: #666;
+	border: none;
+	transition: .1s;
+}
+
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+	color: #FFF;
+	background: #8c8c8c;
+	border: none;
+	transform: translateY(-2px);
+}
+
+/* active */
+.remodal-confirm:hover:active,
+.remodal-cancel:hover:active {
+	transform: translateY(2px);
+	box-shadow: none;
+}

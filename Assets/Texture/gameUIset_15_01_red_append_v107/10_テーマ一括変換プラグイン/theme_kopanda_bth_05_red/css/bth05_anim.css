@@ -1,0 +1,145 @@
+/* animation
+--------------------------------------------- */
+
+/* 拡大 */
+@keyframes zoom_obj {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(var(--zoom));
+	}
+}
+
+/* 明度 */
+@keyframes brightness_obj {
+	0% {
+		filter: brightness(100%);
+	}
+	100% {
+		filter: brightness(var(--brightness));
+	}
+}
+
+/* 移動 */
+@keyframes move_obj {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(var(--moveX), var(--moveY));
+	}
+}
+
+/* 不透明度 */
+@keyframes opacity_obj {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: var(--opacity);
+	}
+}
+
+
+/* メニューボタン hover */
+.menu_save:hover,
+.menu_load:hover,
+.menu_window_close:hover,
+.menu_skip:hover,
+.menu_back_title:hover {
+	--zoom: 1.03;
+	--brightness: 130%;
+	animation-name: zoom_obj, brightness_obj;
+	animation-duration: .3s, .7s;
+	animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1), ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1, infinite;
+	animation-direction: normal, alternate;
+	animation-fill-mode: both;
+}
+
+/* メニューボタン active */
+.menu_save:active,
+.menu_load:active,
+.menu_window_close:active,
+.menu_skip:active,
+.menu_back_title:active {
+	animation-play-state: paused;
+}
+
+/* 閉じるボタン、戻るボタン hover */
+.menu_close:hover,
+.back_btn:hover {
+	--brightness: 120%;
+	animation-name: zoom_obj, brightness_obj;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+}
+
+.menu_close:active,
+.back_btn:active {
+	animation-play-state: paused;
+}
+
+/* システムボタン */
+.role_button {
+	--zoom: 1;
+	--brightness: 100%;
+	transform: scale(var(--zoom));
+	filter: brightness(var(--brightness));
+	transition: .1s;
+}
+
+.role_button_blink {
+	animation: blink .5s infinite alternate;
+}
+@keyframes blink {
+	from { filter: brightness(100%); }
+  to   { filter: brightness(120%); }
+}
+
+/* セーブスロット hover */
+.save_list_item:hover {
+	--zoom: 1.02;
+	background: none;
+	animation-name: zoom_obj;
+	animation-duration: .2s;
+	animation-timing-function: cubic-bezier(0.20, 1, 0.5, 1);
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
+
+/* コンフィグ ボタン hover */
+.config_button:hover {
+	--brightness: 130%;
+	--opacity: 1;
+	animation-name: brightness_obj, opacity_obj;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+}
+
+/* CGモード、回想モードの矢印ボタン hover */
+.arrow_button:hover {
+	--brightness: 120%;
+	animation-name: brightness_obj;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+}
+
+.arrow_button:active {
+	animation-play-state: paused;
+}

@@ -4,8 +4,8 @@ using UnityEngine;
 public class Ivent : ScriptableObject
 {
     [SerializeField]
-    private int identifier;
-    public int Identifier
+    private string identifier;
+    public string Identifier
     {
         get { return identifier; }
     }
