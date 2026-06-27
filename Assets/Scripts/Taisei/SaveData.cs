@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class SaveData : MonoBehaviour
 {
@@ -22,5 +23,9 @@ public class SaveData : MonoBehaviour
     {
         //メモ帳を保存
         PlayerPrefs.SetString("Memo", memo);
+    }
+    public static void CheckIvent(Ivent ivent)
+    {
+        PlayerPrefs.SetInt("A" + ivent.Identifier, 1);
     }
 }

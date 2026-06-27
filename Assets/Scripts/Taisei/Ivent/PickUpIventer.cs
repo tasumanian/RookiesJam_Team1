@@ -35,6 +35,8 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
 
         dialog.TextSet(ivent.Content);
 
+        SaveData.CheckIvent(ivent);
+
         gameObject.SetActive(false);
     }
 
