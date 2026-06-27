@@ -493,6 +493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2344137832826860650}
+  - component: {fileID: 1020482643673245173}
   m_Layer: 0
   m_Name: Saibansyo
   m_TagString: Untagged
@@ -517,6 +518,23 @@ Transform:
   - {fileID: 8779613602216877014}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1020482643673245173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647002469922365427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec9977e13d038c4f97b6b7ed294af65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ivents:
+  - {fileID: 721908552660281609}
+  - {fileID: 1366251756349485253}
+  - {fileID: 189695278959942739}
+  hiddenIvents: []
 --- !u!1 &4982456682165799140
 GameObject:
   m_ObjectHideFlags: 0

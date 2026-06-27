@@ -1,32 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public class AriaMove : MonoBehaviour
 {
     [SerializeField]
-    List<GameObject> MapList;
+    List<GameObject> mapList;
 
     [SerializeField]
-    List<Button> ButtonList;
+    Animator ani;
 
-    [SerializeField]
-    Animation ani;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    GameObject nowAria;
+    bool isSecondPhase;
+
+    public bool IsSecondPhase
     {
-        
+        set { isSecondPhase = value; }
     }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
 
     // Update is called once per frame
-    IEnumerator WaitAnimation()
+    IEnumerator ChangeAnimation(int index)
     {
-        //
-        yield return new WaitForSeconds(1f);
+        ani.SetTrigger("BrackOut");
+        yield return new WaitForSeconds(1.5f);
+        
+        Destroy(nowAria);
+
+        nowAria = Instantiate(mapList[index],gameObject.transform);
+        nowAria.GetComponent<IventChecker>().IventLoad(isSecondPhase);
+
+        yield return new WaitForSeconds(0.5f);
+        ani.SetTrigger("RightChange");
 
     }
     public void ChangeAria(int index)
     {
-        StartCoroutine(WaitAnimation());
+        StartCoroutine(ChangeAnimation(index));
     }
 }

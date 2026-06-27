@@ -44,13 +44,6 @@ public class BackPack : MonoBehaviour
             }
         }
     }
-    public void BackPackSave()
-    {
-        foreach (Item item in itemList)
-        {
-            SaveData.AddItem(item);
-        }
-    }
 
     public void AddItem(Item item)
     {
@@ -58,8 +51,7 @@ public class BackPack : MonoBehaviour
 
 
         itemList.Add(item);
-
-        //SaveData.AddItem(item);
+        SaveData.AddItem(item);
 
         GameObject ui = Instantiate(itemUIPrefab, itemMenu.transform);
         itemUIList.Add(ui);
@@ -68,8 +60,7 @@ public class BackPack : MonoBehaviour
     public void RemoveItem(Item item)
     {
         itemList.Remove(item);
-        
-        //SaveData.RemoveItem(item);
+        SaveData.RemoveItem(item);
 
         for(int i = 0; i < itemUIList.Count;i++)
         {
