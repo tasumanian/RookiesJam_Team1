@@ -6,12 +6,14 @@ public class SurveyProgress : MonoBehaviour
 {
     [SerializeField]
     List<Phase> phases;
-
+    [SerializeField]
+    AriaMove ariaMove;
     int nowPhase;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         nowPhase = PlayerPrefs.GetInt("Progress", 0);
+        PhaseLoad();
     }
 
     public void ProgressCheck()
@@ -39,6 +41,26 @@ public class SurveyProgress : MonoBehaviour
     {
         nowPhase++;
         SaveData.SaveProgress(nowPhase);
+        PhaseLoad();
+    }
+    public void PhaseLoad()
+    {
+        if(nowPhase == 0)
+        {
+           //チュートリアルを実施
+           //ariaMove.ChangeAria(6);
+        }
+        if (nowPhase == 1)
+        {
+            ariaMove.IsSecondPhase = false;
+            ariaMove.ChangeAria(0);
+        }
+        if (nowPhase == 2)
+        {
+            ariaMove.IsSecondPhase = true;
+            ariaMove.ChangeAria(0);
+        }
+
 
     }
 }

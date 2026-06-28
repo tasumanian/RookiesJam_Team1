@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
-  m_Name: TestCraftItem 2
+  m_Name: ookinamonooto
   m_EditorClassIdentifier: 
-  identifier: 5
-  itemName: syakee
-  info: ueeeei
-  visual: {fileID: 3542951962486051089, guid: 66af881feae5568449c39280bd399a24, type: 3}
-  attribute: 5
-  materialAItem: {fileID: 11400000, guid: d19d0c62dbf635644ad4bef8892806ff, type: 2}
-  materialBItem: {fileID: 11400000, guid: 186fa6e056b6fee4eab07fc8a83c2bf0, type: 2}
+  identifier: 9
+  itemName: "\u5927\u304D\u306A\u7269\u97F3"
+  info: "\u57F7\u4E8B\u9577\u304C\u901A\u3063\u305F\u77AC\u9593\u306B\u7269\u97F3\u304C\u9CF4\u308A\u51FA\u3057\u305F\u3002"
+  visual: {fileID: 381090743, guid: 1aead2644fccc4948bc67b2afad88b98, type: 3}
+  attribute: 0
+  materialAItem: {fileID: 0}
+  materialBItem: {fileID: 0}

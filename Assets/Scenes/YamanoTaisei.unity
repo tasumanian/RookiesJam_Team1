@@ -331,6 +331,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97874559}
   m_CullTransparentMesh: 1
+--- !u!1 &154147193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4647002469922365427, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
+  m_PrefabInstance: {fileID: 420893319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &182951041
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +774,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300581471}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234744310}
+        m_TargetAssemblyTypeName: AriaMove, Assembly-CSharp
+        m_MethodName: ChangeAria
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300581471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,6 +1108,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4512168255337529247, guid: c6c0d5fa5aca668438557df70e3d25e6, type: 3}
     - target: {fileID: 1020482643673245173, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
+      propertyPath: ivents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020482643673245173, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
       propertyPath: 'ivents.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
@@ -1166,6 +1187,10 @@ PrefabInstance:
       propertyPath: backPack
       value: 
       objectReference: {fileID: 659154718}
+    - target: {fileID: 2829529466051779147, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4647002469922365427, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
       propertyPath: m_Name
       value: MAP
@@ -1217,6 +1242,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8779613602216877014, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1490402059}
+    - targetCorrespondingSourceObject: {fileID: 8779613602216877014, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2026762216}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
 --- !u!4 &420893320 stripped
@@ -1619,6 +1647,7 @@ MonoBehaviour:
   itemMenu: {fileID: 1913753962}
   detailMenu: {fileID: 873044080}
   createMenu: {fileID: 1982863222}
+  sp: {fileID: 0}
 --- !u!224 &659154719
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2588,7 +2617,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 871905705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234744310}
+        m_TargetAssemblyTypeName: AriaMove, Assembly-CSharp
+        m_MethodName: ChangeAria
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &871905705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3273,7 +3314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035887915}
-  - component: {fileID: 1035887914}
+  - component: {fileID: 1035887916}
   m_Layer: 0
   m_Name: GameProgress
   m_TagString: Untagged
@@ -3281,21 +3322,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1035887914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035887913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a22a52e4f508254ca06418b7adb0d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phases:
-  - {fileID: 0}
-  - {fileID: 11400000, guid: fb313ae9811f9fb489f5e55034cb0f22, type: 2}
 --- !u!4 &1035887915
 Transform:
   m_ObjectHideFlags: 0
@@ -3311,6 +3337,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1035887916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035887913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8a3d627ddc8c749b8d8fa415fe436f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phases:
+  - {fileID: 11400000, guid: fb313ae9811f9fb489f5e55034cb0f22, type: 2}
+  - {fileID: 11400000, guid: ef2f1e6fc3ee03f4cb935e52a5047104, type: 2}
+  - {fileID: 11400000, guid: 933e9cdcc6f6fcc44ba6ca6d02a606d9, type: 2}
+  ariaMove: {fileID: 1234744310}
 --- !u!1 &1108124947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,7 +3563,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1155418294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234744310}
+        m_TargetAssemblyTypeName: AriaMove, Assembly-CSharp
+        m_MethodName: ChangeAria
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1155418294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3903,10 +3958,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapList:
-  - {fileID: 4647002469922365427, guid: 09013b15b384bc84fa0386cd8c8d46c0, type: 3}
   - {fileID: 1601218377715426606, guid: 0202db095eb3d784898ba60eb27538f2, type: 3}
-  - {fileID: 0}
+  - {fileID: 1601218377715426606, guid: 769fa86a1e18fed42be6508ce2d72d77, type: 3}
+  - {fileID: 1601218377715426606, guid: a69a76f6536c67e4590cfc0829e571f9, type: 3}
+  - {fileID: 1601218377715426606, guid: 888883c57546e4241a1f601b035043e0, type: 3}
+  - {fileID: 1601218377715426606, guid: c3d7e364d692d1c4e90f71a1af0b2203, type: 3}
+  - {fileID: 1601218377715426606, guid: ab29d8c04ca5eac49b18772dfc8221ad, type: 3}
   ani: {fileID: 1234744309}
+  backpack: {fileID: 659154718}
+  dialog: {fileID: 754333136}
+  nowAria: {fileID: 154147193}
 --- !u!1 &1236993129
 GameObject:
   m_ObjectHideFlags: 0
@@ -5283,7 +5344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433027916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234744310}
+        m_TargetAssemblyTypeName: AriaMove, Assembly-CSharp
+        m_MethodName: ChangeAria
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1433027916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5724,7 +5797,6 @@ GameObject:
   - component: {fileID: 1613689838}
   - component: {fileID: 1613689841}
   - component: {fileID: 1613689840}
-  - component: {fileID: 1613689839}
   m_Layer: 5
   m_Name: Select Screen
   m_TagString: Untagged
@@ -5753,20 +5825,6 @@ RectTransform:
   m_AnchoredPosition: {x: 701, y: 140.49998}
   m_SizeDelta: {x: 518, y: 799}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1613689839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613689837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffd48f3572af6c459287a35ec25e5b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapList: []
-  ani: {fileID: 0}
 --- !u!114 &1613689840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6166,7 +6224,6 @@ GameObject:
   - component: {fileID: 1766811033}
   - component: {fileID: 1766811032}
   - component: {fileID: 1766811031}
-  - component: {fileID: 1766811030}
   m_Layer: 5
   m_Name: MoveIcon
   m_TagString: Untagged
@@ -6193,20 +6250,6 @@ RectTransform:
   m_AnchoredPosition: {x: 889, y: 464}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1766811030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766811028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffd48f3572af6c459287a35ec25e5b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapList: []
-  ani: {fileID: 0}
 --- !u!114 &1766811031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7296,6 +7339,68 @@ RectTransform:
   m_AnchoredPosition: {x: -275.42035, y: -392.84125}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &2026762215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 420893321}
+    m_Modifications:
+    - target: {fileID: 698022787089861386, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_Name
+      value: Ivents (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+--- !u!4 &2026762216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+  m_PrefabInstance: {fileID: 2026762215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2080116136
 PrefabInstance:
   m_ObjectHideFlags: 0

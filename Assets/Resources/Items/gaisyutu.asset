@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
-  m_Name: Item 2
+  m_Name: gaisyutu
   m_EditorClassIdentifier: 
-  identifier: 3
-  itemName: saru
-  info: sarrrru
-  visual: {fileID: 0}
+  identifier: 13
+  itemName: "\u5916\u51FA"
+  info: "\u5916\u51FA\u306F\u3044\u3064\u3082\u304A\u6C17\u306B\u5165\u308A\u306E\u670D\u3092\u7740\u3066\u5348\u524D\u3068\u6DF1\u591C\u306B\u3057\u3066\u3044\u308B\u3002"
+  visual: {fileID: 7131286659125950434, guid: c3882f80a1058c7458553ce1f8acce8b, type: 3}
   attribute: 0
+  materialAItem: {fileID: 0}
+  materialBItem: {fileID: 0}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a35bd3447dba3419c915bbeb846c6d, type: 3}
   m_Name: ivent
   m_EditorClassIdentifier: 
-  identifier: 
-  content: "\u3064\u304F\u3048\u306E\u4E0B\u3092\u8ABF\u3079\u305F\u3001\u3001\n\u306D\u3053\u3092\u307F\u3064\u3051\u305F\uFF01"
-  getItem: {fileID: 11400000, guid: d19d0c62dbf635644ad4bef8892806ff, type: 2}
+  identifier: 0
+  content: "16:00\u6642\u9803\u304B\u3089\u90E8\u5C4B\u306B\u5165\u3089\u308C\u3066\u3044\u305F\u306E\u3067\u3059\u304C\u3001\u90E8\u5C4B\u306E\u524D\u3092\u901A\u308B\u3068\u30AC\u30B5\u30B4\u30BD\u3068\u4F55\u304B\u3092\u6F01\u308B\u3088\u3046\u306A\u97F3\u304C\u805E\u3053\u3048\u3066\u304D\u307E\u3057\u305F\u3002\u3002"
+  getItem: {fileID: 11400000, guid: 2bc34be06863a61429a6691ec41d03c2, type: 2}

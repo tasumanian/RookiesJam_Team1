@@ -49,6 +49,10 @@ public class JudgeProgress : MonoBehaviour
             //アニメーションとか入れるかも
             NextDebate();
         }
+        else
+        {
+            //失敗
+        }
     }
     public void ShowItem(Item item)
     {
@@ -60,6 +64,10 @@ public class JudgeProgress : MonoBehaviour
         {// 正解なら
             //アニメーションとか入れるかも
             NextDebate();
+        }
+        else
+        {
+            //失敗
         }
     }
     public void NextDebate()
