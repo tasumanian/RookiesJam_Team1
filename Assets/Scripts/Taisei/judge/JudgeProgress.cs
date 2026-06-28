@@ -20,11 +20,13 @@ public class JudgeProgress : MonoBehaviour
     void Start()
     {
         nowProgress = PlayerPrefs.GetInt("Progress", JUDGEPHASE) - JUDGEPHASE;
+        DebateStart();
     }
     private void DebateStart()
     {
         //相手の供述を表示
         dialog.TextSet(debateList[nowProgress].Statement);
+
         //actionに応じて表示
         if (debateList[nowProgress].ActionType == DebateAction.choice)
         {//ボタンの表示
