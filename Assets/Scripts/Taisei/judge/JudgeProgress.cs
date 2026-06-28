@@ -5,6 +5,9 @@ using TMPro;
 public class JudgeProgress : MonoBehaviour
 {
     [SerializeField]
+    private Dialog mydialog;
+
+    [SerializeField]
     List<Debate> debateList;
 
     private int nowProgress;
@@ -22,7 +25,7 @@ public class JudgeProgress : MonoBehaviour
         nowProgress = PlayerPrefs.GetInt("Progress", JUDGEPHASE) - JUDGEPHASE;
         DebateStart();
     }
-    private void DebateStart()
+    public void DebateStart() //privateからpublicに変更しました。
     {
         //相手の供述を表示
         dialog.TextSet(debateList[nowProgress].Statement);
@@ -51,7 +54,14 @@ public class JudgeProgress : MonoBehaviour
         }
         else
         {
-            //失敗
+            //失敗したときダイアログスクリプトに処理を飛ばす
+            if (mydialog != null)
+            {
+                mydialog.SetFailureText("私はこの選択で正しいのか……？");
+            }
+
+            // 元の質問に戻す関数
+            DebateStart();
         }
     }
     public void ShowItem(Item item)
