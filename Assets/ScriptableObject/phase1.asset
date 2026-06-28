@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: phase1
   m_EditorClassIdentifier: 
   needItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 9b6a2b481fc93db448a2b71ac76fd615, type: 2}
+  - {fileID: 11400000, guid: f66997f70af7df445b30e7061f3c0878, type: 2}
   needIvents:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 852a9bbe829629b4b8e9d5488bb4622d, type: 2}
+  - {fileID: 11400000, guid: 60c24c5eb2d264949ad7d34a697428ab, type: 2}
+  - {fileID: 11400000, guid: 050776d89529f794d90be1f540f57f64, type: 2}
+  - {fileID: 11400000, guid: 10368d3d6d76ae04cae166da704e2d24, type: 2}
+  - {fileID: 11400000, guid: 50047355baa08504eaa6bebf17e934c7, type: 2}
+  - {fileID: 11400000, guid: c8aa637bcc6d9c8489da77a1f0400537, type: 2}
+  - {fileID: 11400000, guid: e47b74eda283e1d4bbd9b1dc13af2c3f, type: 2}
+  - {fileID: 11400000, guid: 8befdca2f15291240a50ba7613a495b7, type: 2}
+  - {fileID: 11400000, guid: 5efe8e87181bd434c98f7b0d72e8d48d, type: 2}
+  - {fileID: 11400000, guid: 282603cd2d4a0c34d9ac8a9d6bef54aa, type: 2}
+  - {fileID: 11400000, guid: 072b0a3c95613e54f923fbbcd2c0c4b3, type: 2}
