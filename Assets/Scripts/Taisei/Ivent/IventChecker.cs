@@ -12,36 +12,43 @@ public class IventChecker : MonoBehaviour
 
     public void IventLoad(bool phase,BackPack backPack,Dialog dialog)
     {
-
-        foreach (GameObject obj in ivents)
-        {
-            obj.SetActive(true);
-
-            PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
-            iventer.BackPack = backPack;
-            iventer.Dialog = dialog;
-            int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
-            if (score == 1) //探索済みなら
+        if(ivents.Count > 0) {
+            foreach (GameObject obj in ivents)
             {
-                obj.SetActive(false);
+                obj.SetActive(true);
+
+                PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
+                iventer.BackPack = backPack;
+                iventer.Dialog = dialog;
+                int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
+                if (score == 1) //探索済みなら
+                {
+                    obj.SetActive(false);
+                }
             }
         }
         if (!phase)
-            return;
-
-        foreach (GameObject obj in hiddenIvents)
         {
-            obj.SetActive(true);
-
-            PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
-            iventer.BackPack = backPack;
-            iventer.Dialog = dialog;
-            int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
-            if (score == 1) //探索済みなら
+            foreach (GameObject obj in hiddenIvents)
             {
                 obj.SetActive(false);
             }
+            return;
+        }
+        if(hiddenIvents.Count > 0) {
+            foreach (GameObject obj in hiddenIvents)
+            {
+                obj.SetActive(true);
+
+                PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
+                iventer.BackPack = backPack;
+                iventer.Dialog = dialog;
+                int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
+                if (score == 1) //探索済みなら
+                {
+                    obj.SetActive(false);
+                }
+            }
         }
     }
-    
 }

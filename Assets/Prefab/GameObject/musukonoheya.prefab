@@ -49,8 +49,8 @@ MonoBehaviour:
   ivents:
   - {fileID: 9157099847213371275}
   - {fileID: 7535832168062512801}
+  hiddenIvents:
   - {fileID: 4691143174042956299}
-  hiddenIvents: []
 --- !u!1 &6560045124181299026
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ivents (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2790811874919352223, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: ivent
+      value: 
+      objectReference: {fileID: 11400000, guid: e0bceafbcd4a6594f9a082e66fedef73, type: 2}
     - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.79
@@ -251,13 +255,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ivents (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2790811874919352223, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: ivent
+      value: 
+      objectReference: {fileID: 11400000, guid: 5efe8e87181bd434c98f7b0d72e8d48d, type: 2}
     - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 9.21
       objectReference: {fileID: 0}
     - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34
+      value: -1.16
       objectReference: {fileID: 0}
     - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
       propertyPath: m_LocalPosition.z
@@ -318,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ivents
       objectReference: {fileID: 0}
+    - target: {fileID: 2790811874919352223, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
+      propertyPath: ivent
+      value: 
+      objectReference: {fileID: 11400000, guid: e47b74eda283e1d4bbd9b1dc13af2c3f, type: 2}
     - target: {fileID: 5253905882966496923, guid: d40c386e7d34f094bb41676c12860a36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.37

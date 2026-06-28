@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52a35bd3447dba3419c915bbeb846c6d, type: 3}
-  m_Name: ivent 10
+  m_Name: doubutunoke
   m_EditorClassIdentifier: 
-  identifier: 10
-  content: "\u5207\u308C\u305F\u7CF8\u304C\u843D\u3061\u3066\u3044\u308B\u3002\u3002\n\u3053\u308C\u306F\u306A\u3093\u3060\uFF1F"
-  getItem: {fileID: 11400000, guid: 186fa6e056b6fee4eab07fc8a83c2bf0, type: 2}
+  identifier: 5
+  content: "\u73FE\u5834\u306E\u5E8A\u306B\u4F55\u304B\u52D5\u7269\u306E\u6BDB\u306E\u3088\u3046\u306A\u3082\u306E\u304C\u843D\u3061\u3066\u3044\u305F\u3002\n\u3044\u3063\u305F\u3044\u4F55\u306E\u6BDB\u3060\u308D\u3046\u304B\uFF1F"
+  speaker: ' '
+  getItem: {fileID: 11400000, guid: dbeb44c41467cfc43b83a0a22037bb65, type: 2}

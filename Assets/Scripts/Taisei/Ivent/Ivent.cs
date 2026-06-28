@@ -17,6 +17,12 @@ public class Ivent : ScriptableObject
         get { return content; }
     }
     [SerializeField]
+    private string speaker;
+    public string Speaker
+    {
+        get { return speaker; }
+    }
+    [SerializeField]
     private Item getItem;
     public Item GetItem
     {

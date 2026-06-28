@@ -171,7 +171,7 @@ public class Dialog : MonoBehaviour
         // 自力で最後まで出し終わったので、ここでもスイッチをONにする。
     }
 
-    public void TextSet(string text)
+    public void TextSet(string text , string speaker)
     // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
     {
         StopAllCoroutines();
@@ -180,7 +180,7 @@ public class Dialog : MonoBehaviour
         msgTexts.Add(text);
         // 引数の文字列をセリフ用リストの末尾に追加。
 
-        speakerNames.Add("");
+        speakerNames.Add(speaker);
         // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
 
         currentTextIndex = msgTexts.Count - 1;

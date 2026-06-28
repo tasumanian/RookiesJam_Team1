@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52a35bd3447dba3419c915bbeb846c6d, type: 3}
-  m_Name: ivent 15
+  m_Name: ito
   m_EditorClassIdentifier: 
-  identifier: 15
-  content: "\u7D2B\u8272\u306E\u74F6\u304C\u304A\u3044\u3066\u3042\u308B\u3002\n\u4E2D\u8EAB\u306F\u7A7A\u306E\u3088\u3046\u3060\u304C\u3001\u55C5\u3050\u3068\u5F37\u70C8\u306A\u523A\u6FC0\u81ED\u304C\u3059\u308B\u3001\u3001"
-  getItem: {fileID: 11400000, guid: d75e36a9b1dcecf48807a3403fd02753, type: 2}
+  identifier: 10
+  content: "\u5207\u308C\u305F\u7CF8\u304C\u843D\u3061\u3066\u3044\u308B\u3002\u3002\n\u3053\u308C\u306F\u306A\u3093\u3060\uFF1F"
+  speaker: ' '
+  getItem: {fileID: 11400000, guid: 186fa6e056b6fee4eab07fc8a83c2bf0, type: 2}
