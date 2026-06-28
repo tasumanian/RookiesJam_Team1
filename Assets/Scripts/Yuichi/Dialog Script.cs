@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic; // リスト（List）を使うために必要な新しい部品。
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -45,16 +45,20 @@ public class Dialog : MonoBehaviour
             if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
             // もしスペースキーが押されたら。
             {
-                StopAllCoroutines();
-                // 文字を出すタイピング演出（コルーチン）を強制終了する。
-                DialogText.text = msgTexts[currentTextIndex];
-                // メッセージを一瞬で全表示する。
-                button.SetActive(true);
-                // 隠していた逆三角ボタンを表示する。
-                skipGuideScript.ShowNextGuide();
-                // 案内表示を「クリックしてつぎへ」に変更。
-                isTextComplete = true;
-                // 文字が出終わった状態にする。
+                // 現在のインデックスがリストの範囲内かチェック
+                if (currentTextIndex >= 0 && currentTextIndex < msgTexts.Count)
+                {
+                    StopAllCoroutines();
+                    // 文字を出すタイピング演出（コルーチン）を強制終了する。
+                    DialogText.text = msgTexts[currentTextIndex];
+                    // メッセージを一瞬で全表示する。
+                    button.SetActive(true);
+                    // 隠していた逆三角ボタンを表示する。
+                    skipGuideScript.ShowNextGuide();
+                    // 案内表示をクリックしてつぎへに変更。
+                    isTextComplete = true;
+                    // 文字が出終わった状態にする。
+                }
             }
         }
         else
@@ -127,7 +131,7 @@ public class Dialog : MonoBehaviour
         button.SetActive(true);
         // 最後まで文字が出し終わったら逆三角ボタンを表示する。
         skipGuideScript.ShowNextGuide();
-        // 読み終わったので案内表示を「つぎへ」に変えてもらう。
+        // 読み終わったので案内表示をつぎへに変えてもらう。
         isTextComplete = true;
         // 自力で最後まで出し終わったので、ここでもスイッチをONにする。
     }

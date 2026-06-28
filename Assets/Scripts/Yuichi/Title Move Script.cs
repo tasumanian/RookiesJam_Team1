@@ -14,8 +14,8 @@ public class TitleMoveScript : MonoBehaviour
     {
         
     }
-    //public void GoToTitle()
-   // {
-        //SceneManager.LoadScene("TitleScene");
-   // }
+    public void StartScene()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }
