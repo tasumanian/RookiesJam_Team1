@@ -28,7 +28,7 @@ public class JudgeProgress : MonoBehaviour
     public void DebateStart() //privateからpublicに変更しました。
     {
         //相手の供述を表示
-        dialog.TextSet(debateList[nowProgress].Statement);
+        dialog.TextSet(debateList[nowProgress].Statement, debateList[nowProgress].Speaker);
 
         //actionに応じて表示
         if (debateList[nowProgress].ActionType == DebateAction.choice)

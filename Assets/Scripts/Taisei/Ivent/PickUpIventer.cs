@@ -43,7 +43,7 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
         backPack.AddItem(ivent.GetItem);
 
-        dialog.TextSet(ivent.Content);
+        dialog.TextSet(ivent.Content,ivent.Speaker);
 
         SaveData.CheckIvent(ivent);
 

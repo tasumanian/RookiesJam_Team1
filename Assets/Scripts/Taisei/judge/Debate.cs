@@ -11,6 +11,12 @@ public class Debate : ScriptableObject
         get { return statement; }
     }
     [SerializeField]
+    private string speaker;
+    public string Speaker
+    {
+        get { return speaker; }
+    }
+    [SerializeField]
     private DebateAction actionType;
     public DebateAction ActionType
     {

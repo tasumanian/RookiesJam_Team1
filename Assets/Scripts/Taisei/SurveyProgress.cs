@@ -13,16 +13,21 @@ public class SurveyProgress : MonoBehaviour
     void Start()
     {
         nowPhase = PlayerPrefs.GetInt("Progress", 0);
+        //テスト用
+        nowPhase = 1;
+
         PhaseLoad();
     }
 
     public void ProgressCheck()
     {
+        Debug.Log("procheck");
         foreach (Item item in phases[nowPhase].NeedItems)
         {
             int score = PlayerPrefs.GetInt(item.Identifier, 0);
             if (score == 0) //条件を満たしていない場合
             {
+                Debug.Log(item.Identifier);
                 return;
             }
         }
@@ -31,10 +36,12 @@ public class SurveyProgress : MonoBehaviour
             int score = PlayerPrefs.GetInt("A" + ivent.Identifier, 0);
             if (score == 0) //条件を満たしていない場合
             {
+                Debug.Log("A" + ivent.Identifier);
                 return;
             }
         }
         //両条件をクリアしている場合
+        Debug.Log("correct");
         NextPhase();
     }
     public void NextPhase()
@@ -45,6 +52,7 @@ public class SurveyProgress : MonoBehaviour
     }
     public void PhaseLoad()
     {
+        Debug.Log("now" + nowPhase);
         if(nowPhase == 0)
         {
            //チュートリアルを実施
