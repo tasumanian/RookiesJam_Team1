@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleMoveScript : MonoBehaviour
+public class TrialPhaseSceneScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,8 +14,8 @@ public class TitleMoveScript : MonoBehaviour
     {
         
     }
-    public void StartScene()
+    public void StartGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("judgeScene");
     }
 }

@@ -5,6 +5,10 @@ using TMPro;
 
 public class Dialog : MonoBehaviour
 {
+    [SerializeField] private JudgeProgress judgeProgress;
+
+    [SerializeField] private bool isFailureLoop = false;
+
     [SerializeField] private TextMeshProUGUI DialogText;
     // 画面のテキスト枠を登録する場所。
     [SerializeField] private GameObject button;
@@ -62,7 +66,7 @@ public class Dialog : MonoBehaviour
             }
         }
         else
-        // そうではなく、すでに文字が出終わっているなら。
+        // すでに文字が出終わっているなら。
         {
             if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
             // もしマウスの左クリックが押されたら。
@@ -79,20 +83,34 @@ public class Dialog : MonoBehaviour
                 else
                 // 会話が全部終わったなら。
                 {
-                    DialogText.text = "";
-                    // 画面のセリフを消して空にする。
-                    NameText.text = "";
-                    // 画面の名前も消して空にする。
-                    button.SetActive(false);
-                    // 逆三角ボタンを隠す。
-                    skipGuideScript.ShowEndGuide();
-                    // 案内表示を完全に消してもらう。
+                    // もし失敗セリフを読み終わったなら
+                    if (isFailureLoop)
+                    {
+                        isFailureLoop = false; // 失敗モードを終了する
+
+                        if (judgeProgress != null)
+                        {
+                            judgeProgress.DebateStart();
+                        }
+                    }
+                    else // 通常の会話が終わったなら
+
+                    {
+                        DialogText.text = "";
+                        // 画面のセリフを消して空にする。
+                        NameText.text = "";
+                        // 画面の名前も消して空にする。
+                        button.SetActive(false);
+                        // 逆三角ボタンを隠す。
+                        skipGuideScript.ShowEndGuide();
+                        // 案内表示を完全に消してもらう。
+                    }
                 }
             }
         }
     }
 
-    void StartNewDialog()
+    public void StartNewDialog()
     {
         if (msgTexts.Count == 0) return;
         // リストの中身が空っぽなら、エラーを防ぐために処理をスルーする。
@@ -116,7 +134,24 @@ public class Dialog : MonoBehaviour
         StartCoroutine(TypeDisplay());
         // 新しいセリフのタイピング演出をスタートさせる。
     }
+    public void SetFailureText(string failureMessage)
+    {
+        // ダイアログをクリアして、失敗セリフを挿入
+        msgTexts.Clear();
+        msgTexts.Add(failureMessage);
+        currentTextIndex = 0;
 
+        // 失敗した時の名前枠を固定
+        NameText.text = "わたし";
+
+        // 3. 共有してもらった StartNewDialog の後半の処理を安全に実行
+        isTextComplete = false;
+        DialogText.text = "";
+        button.SetActive(false);
+
+        skipGuideScript.ShowSkipGuide();
+        StartCoroutine(TypeDisplay()); // タイピング演出をスタート
+    }
     IEnumerator TypeDisplay()
     // 時間差で文字を出すコルーチンの台本
     {
