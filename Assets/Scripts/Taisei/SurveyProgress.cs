@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class GameProgress : MonoBehaviour
+public class SurveyProgress : MonoBehaviour
 {
     [SerializeField]
     List<Phase> phases;

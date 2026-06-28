@@ -34,6 +34,9 @@ public class CreateItemMenu : MonoBehaviour
             if ((item.MaterialAItem == Aitem.item && item.MaterialBItem == Bitem.item)
                 || (item.MaterialAItem == Bitem.item && item.MaterialBItem == Aitem.item))
             {
+                //アニメーション
+
+
                 Debug.Log("itemCreate");
                 //アイテム生成
                 CreatedItem.Initializae(item, null);
