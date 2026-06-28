@@ -10,16 +10,17 @@ public class IventChecker : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public void IventLoad(bool phase)
+    public void IventLoad(bool phase,BackPack backPack,Dialog dialog)
     {
 
         foreach (GameObject obj in ivents)
         {
             obj.SetActive(true);
 
-            Ivent ivent = obj.GetComponent<Ivent>();
-            
-            int score = PlayerPrefs.GetInt("A" + ivent.Identifier, 0);
+            PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
+            iventer.BackPack = backPack;
+            iventer.Dialog = dialog;
+            int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
             if (score == 1) //探索済みなら
             {
                 obj.SetActive(false);
@@ -32,9 +33,10 @@ public class IventChecker : MonoBehaviour
         {
             obj.SetActive(true);
 
-            Ivent ivent = obj.GetComponent<Ivent>();
-
-            int score = PlayerPrefs.GetInt("A" + ivent.Identifier, 0);
+            PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
+            iventer.BackPack = backPack;
+            iventer.Dialog = dialog;
+            int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
             if (score == 1) //探索済みなら
             {
                 obj.SetActive(false);

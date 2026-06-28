@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
-  m_Name: Item 3
+  m_Name: binn
   m_EditorClassIdentifier: 
-  identifier: 4
-  itemName: kizi
-  info: kiiiiizi
-  visual: {fileID: -1232194625581636379, guid: 2df81cbd5064be54587546fd372fe10e, type: 3}
-  attribute: 0
+  identifier: 16
+  itemName: "\u7D2B\u8272\u306E\u74F6"
+  info: "\u4E2D\u8EAB\u306F\u5165\u3063\u3066\u3044\u306A\u3044\u3002\u55C5\u3050\u3068\u5F37\u70C8\u306A\u523A\u6FC0\u81ED\u304C\u3059\u308B"
+  visual: {fileID: -8985209635621461076, guid: f8153fa2c32d20e41944dd86de976926, type: 3}
+  attribute: 1
   materialAItem: {fileID: 0}
   materialBItem: {fileID: 0}

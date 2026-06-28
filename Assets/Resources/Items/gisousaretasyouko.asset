@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
+  m_Name: gisousaretasyouko
+  m_EditorClassIdentifier: 
+  identifier: 20
+  itemName: "\u507D\u88C5\u306E\u53EF\u80FD\u6027"
+  info: "\u30DE\u30B9\u30BF\u30FC\u30AD\u30FC\u304C\u3042\u308C\u3070\u3001\u606F\u5B50\u306E\u90E8\u5C4B\u306B\u5B9D\u77F3\u3092\u7F6E\u3044\u3066\u304A\u304F\u3053\u3068\u306F\u53EF\u80FD\u3060\u308D\u3046\u3002"
+  visual: {fileID: 4210626786328978904, guid: f6b30aea7baaea3498d3746afb1b4803, type: 3}
+  attribute: 2
+  materialAItem: {fileID: 11400000, guid: 6d3af38342e36da42a0f69941e40932c, type: 2}
+  materialBItem: {fileID: 11400000, guid: 0b62c76043aca8242a7a792f6b4c048f, type: 2}

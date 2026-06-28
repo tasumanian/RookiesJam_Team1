@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
+  m_Name: bakemono
+  m_EditorClassIdentifier: 
+  identifier: 6
+  itemName: "\u5316\u3051\u7269\u306E\u5642"
+  info: "\u5348\u524D\u3068\u6DF1\u591C\u306B\u5316\u3051\u7269\u306E\u59FF\u3092\u3088\u304F\u898B\u308B\u3089\u3057\u3044\u3002\u5316\u3051\u7269\u306A\u3093\u3066\u3044\u308B\u306E\u304B\uFF1F"
+  visual: {fileID: 6482197745070995492, guid: cd6e901cfc0e7ff448f2e1e5813d86b9, type: 3}
+  attribute: 0
+  materialAItem: {fileID: 0}
+  materialBItem: {fileID: 0}
