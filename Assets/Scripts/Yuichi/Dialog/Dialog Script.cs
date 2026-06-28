@@ -1,10 +1,14 @@
 using System.Collections;
-using System.Collections.Generic; // リスト（List）を使うために必要な新しい部品。
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class Dialog : MonoBehaviour
 {
+    [SerializeField] private JudgeProgress judgeProgress;
+
+    [SerializeField] private bool isFailureLoop = false;
+
     [SerializeField] private TextMeshProUGUI DialogText;
     // 画面のテキスト枠を登録する場所。
     [SerializeField] private GameObject button;
@@ -45,20 +49,24 @@ public class Dialog : MonoBehaviour
             if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
             // もしスペースキーが押されたら。
             {
-                StopAllCoroutines();
-                // 文字を出すタイピング演出（コルーチン）を強制終了する。
-                DialogText.text = msgTexts[currentTextIndex];
-                // メッセージを一瞬で全表示する。
-                button.SetActive(true);
-                // 隠していた逆三角ボタンを表示する。
-                skipGuideScript.ShowNextGuide();
-                // 案内表示を「クリックしてつぎへ」に変更。
-                isTextComplete = true;
-                // 文字が出終わった状態にする。
+                // 現在のインデックスがリストの範囲内かチェック
+                if (currentTextIndex >= 0 && currentTextIndex < msgTexts.Count)
+                {
+                    StopAllCoroutines();
+                    // 文字を出すタイピング演出（コルーチン）を強制終了する。
+                    DialogText.text = msgTexts[currentTextIndex];
+                    // メッセージを一瞬で全表示する。
+                    button.SetActive(true);
+                    // 隠していた逆三角ボタンを表示する。
+                    skipGuideScript.ShowNextGuide();
+                    // 案内表示をクリックしてつぎへに変更。
+                    isTextComplete = true;
+                    // 文字が出終わった状態にする。
+                }
             }
         }
         else
-        // そうではなく、すでに文字が出終わっているなら。
+        // すでに文字が出終わっているなら。
         {
             if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
             // もしマウスの左クリックが押されたら。
@@ -75,20 +83,34 @@ public class Dialog : MonoBehaviour
                 else
                 // 会話が全部終わったなら。
                 {
-                    DialogText.text = "";
-                    // 画面のセリフを消して空にする。
-                    NameText.text = "";
-                    // 画面の名前も消して空にする。
-                    button.SetActive(false);
-                    // 逆三角ボタンを隠す。
-                    skipGuideScript.ShowEndGuide();
-                    // 案内表示を完全に消してもらう。
+                    // もし失敗セリフを読み終わったなら
+                    if (isFailureLoop)
+                    {
+                        isFailureLoop = false; // 失敗モードを終了する
+
+                        if (judgeProgress != null)
+                        {
+                            judgeProgress.DebateStart();
+                        }
+                    }
+                    else // 通常の会話が終わったなら
+
+                    {
+                        DialogText.text = "";
+                        // 画面のセリフを消して空にする。
+                        NameText.text = "";
+                        // 画面の名前も消して空にする。
+                        button.SetActive(false);
+                        // 逆三角ボタンを隠す。
+                        skipGuideScript.ShowEndGuide();
+                        // 案内表示を完全に消してもらう。
+                    }
                 }
             }
         }
     }
 
-    void StartNewDialog()
+    public void StartNewDialog()
     {
         if (msgTexts.Count == 0) return;
         // リストの中身が空っぽなら、エラーを防ぐために処理をスルーする。
@@ -112,7 +134,24 @@ public class Dialog : MonoBehaviour
         StartCoroutine(TypeDisplay());
         // 新しいセリフのタイピング演出をスタートさせる。
     }
+    public void SetFailureText(string failureMessage)
+    {
+        // ダイアログをクリアして、失敗セリフを挿入
+        msgTexts.Clear();
+        msgTexts.Add(failureMessage);
+        currentTextIndex = 0;
 
+        // 失敗した時の名前枠を固定
+        NameText.text = "わたし";
+
+        // 3. 共有してもらった StartNewDialog の後半の処理を安全に実行
+        isTextComplete = false;
+        DialogText.text = "";
+        button.SetActive(false);
+
+        skipGuideScript.ShowSkipGuide();
+        StartCoroutine(TypeDisplay()); // タイピング演出をスタート
+    }
     IEnumerator TypeDisplay()
     // 時間差で文字を出すコルーチンの台本
     {
@@ -127,7 +166,7 @@ public class Dialog : MonoBehaviour
         button.SetActive(true);
         // 最後まで文字が出し終わったら逆三角ボタンを表示する。
         skipGuideScript.ShowNextGuide();
-        // 読み終わったので案内表示を「つぎへ」に変えてもらう。
+        // 読み終わったので案内表示をつぎへに変えてもらう。
         isTextComplete = true;
         // 自力で最後まで出し終わったので、ここでもスイッチをONにする。
     }
