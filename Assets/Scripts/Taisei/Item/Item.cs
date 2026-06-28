@@ -22,6 +22,7 @@ public class Item : ScriptableObject
 
     //詳細情報
     [SerializeField]
+    [TextArea(5, 5)]
     private string info;
     public string Info
     {
@@ -65,11 +66,8 @@ public class Item : ScriptableObject
 //追加する場合は名前とカンマを追加すること
 public enum Attribute
 {
-    hage,
-    hige,
-    huge,
-    hege,
-    hoge,
+    testimony,
+    evidence,
     creation
 
 }

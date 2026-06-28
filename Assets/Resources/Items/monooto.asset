@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
-  m_Name: TestItem 1
+  m_Name: monooto
   m_EditorClassIdentifier: 
-  identifier: 2
-  itemName: inu
-  info: iiiiinnnu
-  visual: {fileID: 3542951962486051089, guid: 66af881feae5568449c39280bd399a24, type: 3}
+  identifier: 0
+  itemName: "\u59BB\u306E\u90E8\u5C4B\u304B\u3089\u7269\u97F3"
+  info: "16:00\u6642\u9803\u3001\u88AB\u5BB3\u8005\u306E\u59BB\u306E\u90E8\u5C4B\u304B\u3089\u4F55\u304B\u3092\u6F01\u308B\u3088\u3046\u306A\u7269\u97F3"
+  visual: {fileID: 381090743, guid: 1aead2644fccc4948bc67b2afad88b98, type: 3}
   attribute: 0
   materialAItem: {fileID: 0}
   materialBItem: {fileID: 0}

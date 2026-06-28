@@ -1,18 +1,28 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField]
     Ivent ivent;
+    public Ivent Ivent
+    {
+        get { return ivent; }
+    }
 
     [SerializeField]
     BackPack backPack;
+    public BackPack BackPack
+    {
+        set { backPack = value; }
+    }
 
     [SerializeField]
     Dialog dialog;
+    public Dialog Dialog
+    {
+        set {  dialog = value; }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnPointerEnter(PointerEventData eventData)
     {

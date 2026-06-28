@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
+  m_Name: siiinnnosinzitu
+  m_EditorClassIdentifier: 
+  identifier: 21
+  itemName: "\u6B7B\u56E0"
+  info: "\u88AB\u5BB3\u8005\u306E\u53E3\u304B\u3089\u6DB2\u4F53\u304C\u5782\u308C\u3066\u3044\u305F\u3053\u3068\u3092\u8003\u3048\u308B\u3068\u7D2B\u306E\u74F6\u306B\u306F\u6BD2\u304C\u5165\u3063\u3066\u3044\u305F\u3068\u8003\u3048\u3089\u308C\u308B\u3002\u6BD2\u6BBA\u304B\uFF1F"
+  visual: {fileID: 7848380066235954636, guid: 0dd75b5188ba45549bbd528524cdb665, type: 3}
+  attribute: 2
+  materialAItem: {fileID: 11400000, guid: d75e36a9b1dcecf48807a3403fd02753, type: 2}
+  materialBItem: {fileID: 11400000, guid: d04605ac36e9cdc4ebbd3b0d6c9ba60e, type: 2}
