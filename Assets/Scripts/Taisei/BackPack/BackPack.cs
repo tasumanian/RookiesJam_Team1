@@ -13,14 +13,14 @@ public class BackPack : MonoBehaviour
 
     [SerializeField]
     private GameObject itemUIPrefab;
-
     [SerializeField]
     private GameObject itemMenu;
     [SerializeField]
     private GameObject detailMenu;
-
     [SerializeField]
     private CreateItemMenu createMenu;
+    [SerializeField]
+    SurveyProgress sp;
 
     private bool isCustom = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,8 +47,6 @@ public class BackPack : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        //既に持っている場合は無視する
-
 
         itemList.Add(item);
         SaveData.AddItem(item);
@@ -56,6 +54,8 @@ public class BackPack : MonoBehaviour
         GameObject ui = Instantiate(itemUIPrefab, itemMenu.transform);
         itemUIList.Add(ui);
         ui.GetComponent<ItemUI>().Initializae(item, this);
+
+        sp.ProgressCheck();
     }
     public void RemoveItem(Item item)
     {
