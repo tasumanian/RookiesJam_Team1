@@ -186,7 +186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &116835360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2089,7 +2089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1018112502
 Transform:
   m_ObjectHideFlags: 0
@@ -3236,6 +3236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24466698de693824284b742bac75992c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  judgeProgress: {fileID: 0}
+  isFailureLoop: 0
   DialogText: {fileID: 1827705167}
   button: {fileID: 871441272}
   skipGuideScript: {fileID: 1777068651}

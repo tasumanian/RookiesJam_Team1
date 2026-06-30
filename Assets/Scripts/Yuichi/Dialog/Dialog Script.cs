@@ -121,12 +121,17 @@ public class Dialog : MonoBehaviour
         // 画面の文字を一度リセットして空にする。
         button.SetActive(false);
         // 逆三角ボタンを新しく隠し直す設定。
-
+    
         if (currentTextIndex < speakerNames.Count)
         // 次の番号の名前が登録されていれば。
         {
             NameText.text = speakerNames[currentTextIndex];
             // 名前用のテキスト枠を書き換える。
+        }
+        else
+        {
+            NameText.text = "";
+            // 名前が空っぽなら、表示られないようにする。
         }
 
         skipGuideScript.ShowSkipGuide();
