@@ -17,4 +17,11 @@ public class Phase : ScriptableObject
     {
         get { return needIvents; }
     }
+    [SerializeField]
+    [TextArea(5,5)]
+    private string context;
+    public string Context
+    {
+        get { return context;  }
+    }
 }

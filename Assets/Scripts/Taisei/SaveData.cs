@@ -17,7 +17,7 @@ public class SaveData : MonoBehaviour
     public static void SaveProgress(int progress)
     {
         //進捗状況を保存
-        PlayerPrefs.SetInt("Progress", progress);
+        PlayerPrefs.SetInt(progress.ToString(), 1);
     }
     public static void MemoSave(string memo)
     {

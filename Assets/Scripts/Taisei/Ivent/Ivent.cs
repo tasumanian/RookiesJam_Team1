@@ -28,6 +28,12 @@ public class Ivent : ScriptableObject
     {
         get { return getItem; }
     }
+    [SerializeField]
+    private Phase terms;
+    public Phase Terms
+    {
+        get { return terms;  }
+    }
 }
 public enum IventType
 {

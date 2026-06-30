@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2ca0c88b344f2946be2bcfc64b439a0, type: 3}
-  m_Name: tutorial
+  m_Name: reko-da-
   m_EditorClassIdentifier: 
   needItems: []
-  needIvents: []
+  needIvents:
+  - {fileID: 11400000, guid: a4b19adf34c3cae49b82caa637eebbda, type: 2}
+  context: "\u3042\u306E\u30EC\u30B3\u30FC\u30C0\u30FC\u3001\u306A\u3093\u3060\u304B\u9055\u548C\u611F\u304C\u3042\u308B\u306A\u3002\u3002\u8AC7\u8A71\u5BA4\u306B\u805E\u304D\u8FBC\u307F\u306B\u884C\u304F\u304B\u3002"

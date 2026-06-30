@@ -16,3 +16,4 @@ MonoBehaviour:
   content: "\u5207\u308C\u305F\u7CF8\u304C\u843D\u3061\u3066\u3044\u308B\u3002\u3002\n\u3053\u308C\u306F\u306A\u3093\u3060\uFF1F"
   speaker: ' '
   getItem: {fileID: 11400000, guid: 186fa6e056b6fee4eab07fc8a83c2bf0, type: 2}
+  terms: {fileID: 11400000, guid: ef2f1e6fc3ee03f4cb935e52a5047104, type: 2}
