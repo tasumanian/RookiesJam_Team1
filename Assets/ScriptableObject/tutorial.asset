@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ca0c88b344f2946be2bcfc64b439a0, type: 3}
   m_Name: tutorial
   m_EditorClassIdentifier: 
-  needItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  needIvents:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  needItems: []
+  needIvents: []

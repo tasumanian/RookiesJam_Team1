@@ -1,0 +1,842 @@
+fileFormatVersion: 2
+guid: bee3e9253d3968b4a94bbac406b5877c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1819386314852319115
+    second: saibankann-re_0
+  - first:
+      213: -5175369832687698195
+    second: saibankann-re_1
+  - first:
+      213: 5154363972750965044
+    second: saibankann-re_2
+  - first:
+      213: -6694568787821436081
+    second: saibankann-re_3
+  - first:
+      213: -2808178692334110278
+    second: saibankann-re_4
+  - first:
+      213: -2146604617603310730
+    second: saibankann-re_5
+  - first:
+      213: 7238147122122701260
+    second: saibankann-re_6
+  - first:
+      213: 3613743749048927321
+    second: saibankann-re_7
+  - first:
+      213: -1280611781591893808
+    second: saibankann-re_8
+  - first:
+      213: 4835644897211088254
+    second: saibankann-re_9
+  - first:
+      213: 1353842070391485500
+    second: saibankann-re_10
+  - first:
+      213: 5060952567350888839
+    second: saibankann-re_11
+  - first:
+      213: 6460979693508043782
+    second: saibankann-re_12
+  - first:
+      213: 7492877530641044930
+    second: saibankann-re_13
+  - first:
+      213: 1702473102386441249
+    second: saibankann-re_14
+  - first:
+      213: -5635976963764360864
+    second: saibankann-re_15
+  - first:
+      213: 6576321062764423696
+    second: saibankann-re_16
+  - first:
+      213: -5572455469557259949
+    second: saibankann-re_17
+  - first:
+      213: -2507394905076703711
+    second: saibankann-re_18
+  - first:
+      213: -201870042124672174
+    second: saibankann-re_19
+  - first:
+      213: -6091418600500744319
+    second: saibankann-re_20
+  - first:
+      213: -7796686590547508171
+    second: saibankann-re_21
+  - first:
+      213: -7512509180256608917
+    second: saibankann-re_22
+  - first:
+      213: -2277472865349408439
+    second: saibankann-re_23
+  - first:
+      213: 5556923219201492615
+    second: saibankann-re_24
+  - first:
+      213: 9001969385062900979
+    second: saibankann-re_25
+  - first:
+      213: 6038048439494859921
+    second: saibankann-re_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: saibankann-re_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 2774
+        width: 743
+        height: 1271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fbafdb632cf3910800000000000000
+      internalID: 1819386314852319115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_1
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 3811
+        width: 190
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee7065be846d28b0800000000000000
+      internalID: -5175369832687698195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_2
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 3788
+        width: 282
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43974e669baf78740800000000000000
+      internalID: 5154363972750965044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_3
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 3804
+        width: 458
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f436c75282d1813a0800000000000000
+      internalID: -6694568787821436081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_4
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 3736
+        width: 330
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9ba919b585709d0800000000000000
+      internalID: -2808178692334110278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_5
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 3784
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b9a86397ab532e0800000000000000
+      internalID: -2146604617603310730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_6
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 3748
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9b32e4570137460800000000000000
+      internalID: 7238147122122701260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_7
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 3730
+        width: 71
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95489571bc8962230800000000000000
+      internalID: 3613743749048927321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_8
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 3734
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8f80f9e5a5a3ee0800000000000000
+      internalID: -1280611781591893808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_9
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 3474
+        width: 332
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d7236e969ab1340800000000000000
+      internalID: 4835644897211088254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_10
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1296
+        width: 1795
+        height: 2103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34f9a7a030d9c210800000000000000
+      internalID: 1353842070391485500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_11
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 3111
+        width: 295
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7890d02cb8d1c3640800000000000000
+      internalID: 5060952567350888839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_12
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 3223
+        width: 268
+        height: 460
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6042f8cacc20aa950800000000000000
+      internalID: 6460979693508043782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_13
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 3260
+        width: 200
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c59d574a6c0cf760800000000000000
+      internalID: 7492877530641044930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_14
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 3248
+        width: 189
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ca66b344660a710800000000000000
+      internalID: 1702473102386441249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_15
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 2955
+        width: 615
+        height: 644
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0696a88efccf8c1b0800000000000000
+      internalID: -5635976963764360864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_16
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 3164
+        width: 236
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a2efae929c34b50800000000000000
+      internalID: 6576321062764423696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_17
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 3100
+        width: 278
+        height: 546
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3516b5a4649aaa2b0800000000000000
+      internalID: -5572455469557259949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_18
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 3148
+        width: 223
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e574b5e91f33dd0800000000000000
+      internalID: -2507394905076703711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_19
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 3216
+        width: 124
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253ad582440d23df0800000000000000
+      internalID: -201870042124672174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_20
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 3395
+        width: 162
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f22fa7e0fe67ba0800000000000000
+      internalID: -6091418600500744319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 215
+        width: 1207
+        height: 1524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5344d51cada9cc390800000000000000
+      internalID: -7796686590547508171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_22
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1243
+        width: 364
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d91fa14b43eb790800000000000000
+      internalID: -7512509180256608917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_23
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 224
+        width: 1733
+        height: 1956
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949e14bde7ac460e0800000000000000
+      internalID: -2277472865349408439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_24
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 811
+        width: 384
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78600acd9382e1d40800000000000000
+      internalID: 5556923219201492615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_25
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 528
+        width: 193
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4ad93167b6dec70800000000000000
+      internalID: 9001969385062900979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_26
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 211
+        width: 550
+        height: 663
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c51b490157bc350800000000000000
+      internalID: 6038048439494859921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saibankann-re_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2893
+        height: 4092
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c839dea966483c43afdd2cb3ce9fdfd
+      internalID: 476154262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 02180e73018210f488c1190145dab362
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      saibankann-re_0: 1819386314852319115
+      saibankann-re_1: -5175369832687698195
+      saibankann-re_10: 1353842070391485500
+      saibankann-re_11: 5060952567350888839
+      saibankann-re_12: 6460979693508043782
+      saibankann-re_13: 7492877530641044930
+      saibankann-re_14: 1702473102386441249
+      saibankann-re_15: -5635976963764360864
+      saibankann-re_16: 6576321062764423696
+      saibankann-re_17: -5572455469557259949
+      saibankann-re_18: -2507394905076703711
+      saibankann-re_19: -201870042124672174
+      saibankann-re_2: 5154363972750965044
+      saibankann-re_20: -6091418600500744319
+      saibankann-re_21: -7796686590547508171
+      saibankann-re_22: -7512509180256608917
+      saibankann-re_23: -2277472865349408439
+      saibankann-re_24: 5556923219201492615
+      saibankann-re_25: 9001969385062900979
+      saibankann-re_26: 6038048439494859921
+      saibankann-re_27: 476154262
+      saibankann-re_3: -6694568787821436081
+      saibankann-re_4: -2808178692334110278
+      saibankann-re_5: -2146604617603310730
+      saibankann-re_6: 7238147122122701260
+      saibankann-re_7: 3613743749048927321
+      saibankann-re_8: -1280611781591893808
+      saibankann-re_9: 4835644897211088254
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

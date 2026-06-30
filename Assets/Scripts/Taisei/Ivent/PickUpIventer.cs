@@ -16,7 +16,14 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
     {
         set { backPack = value; }
     }
+    [SerializeField]
+    private AudioClip SE;
 
+    private SoundManager soundManager;
+    public SoundManager SoundManager
+    {
+        set { soundManager = value; }
+    }
     [SerializeField]
     Dialog dialog;
     public Dialog Dialog
@@ -42,6 +49,8 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
         //イベント実行
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
         backPack.AddItem(ivent.GetItem);
+
+        soundManager.PlaySE(SE);
 
         dialog.TextSet(ivent.Content,ivent.Speaker);
 

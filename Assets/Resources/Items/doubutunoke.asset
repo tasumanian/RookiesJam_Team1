@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: doubutunoke
   m_EditorClassIdentifier: 
   identifier: 5
-  itemName: "\u52D5\u7269\u306E\u6BDB\u304C\u843D\u3061\u3066\u3044\u305F"
+  itemName: "\u52D5\u7269\u306E\u6BDB"
   info: "\u78BA\u304B\u306B\u3053\u308C\u306F\u3001\u4EBA\u9593\u306E\u6BDB\u3067\u306F\u306A\u3044\u3001\u4F55\u304B\u3057\u3089\u306E\u52D5\u7269\u306E\u6BDB\u3060\u308D\u3046"
   visual: {fileID: -2988036248643415139, guid: 4eba3094614980a41b6d2aa20de6d505, type: 3}
   attribute: 0

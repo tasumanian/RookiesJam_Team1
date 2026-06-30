@@ -7,10 +7,9 @@ public class IventChecker : MonoBehaviour
 
     [SerializeField]
     List<GameObject> hiddenIvents;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public void IventLoad(bool phase,BackPack backPack,Dialog dialog)
+    public void IventLoad(bool phase,BackPack backPack,Dialog dialog, SoundManager soundManager)
     {
         if(ivents.Count > 0) {
             foreach (GameObject obj in ivents)
@@ -20,6 +19,7 @@ public class IventChecker : MonoBehaviour
                 PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
                 iventer.BackPack = backPack;
                 iventer.Dialog = dialog;
+                iventer.SoundManager = soundManager;
                 int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
                 if (score == 1) //探索済みなら
                 {
