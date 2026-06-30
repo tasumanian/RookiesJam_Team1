@@ -16,16 +16,9 @@ public class AriaMove : MonoBehaviour
     [SerializeField]
     SoundManager soundManager;
 
-    bool isSecondPhase;
+    int nowIndex = 0;
+    public List<Phase> passedPhase;
 
-    public bool IsSecondPhase
-    {
-        set { isSecondPhase = value; }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-
-    // Update is called once per frame
     IEnumerator ChangeAnimation(int index)
     {
         ani.SetTrigger("BrackOut");
@@ -34,7 +27,7 @@ public class AriaMove : MonoBehaviour
         Destroy(nowAria);
 
         nowAria = Instantiate(mapList[index],gameObject.transform);
-        nowAria.GetComponent<IventChecker>().IventLoad(isSecondPhase, backpack, dialog,soundManager);
+        nowAria.GetComponent<IventChecker>().IventLoad(passedPhase, backpack, dialog,soundManager);
 
         yield return new WaitForSeconds(0.5f);
         ani.SetTrigger("RightChange");
@@ -42,6 +35,15 @@ public class AriaMove : MonoBehaviour
     }
     public void ChangeAria(int index)
     {
-        StartCoroutine(ChangeAnimation(index));
+        if (index == -1)
+        {
+            StartCoroutine(ChangeAnimation(nowIndex));
+        }
+        else
+        {
+            StartCoroutine(ChangeAnimation(index));
+
+            nowIndex = index;
+        }
     }
 }

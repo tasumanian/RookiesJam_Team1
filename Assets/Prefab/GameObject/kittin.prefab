@@ -46,8 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec9977e13d038c4f97b6b7ed294af65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ivents: []
-  hiddenIvents:
+  ivents:
   - {fileID: 5287791629758479731}
 --- !u!1 &6560045124181299026
 GameObject:

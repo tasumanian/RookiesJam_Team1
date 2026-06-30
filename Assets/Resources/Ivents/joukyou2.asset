@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a35bd3447dba3419c915bbeb846c6d, type: 3}
+  m_Name: joukyou2
+  m_EditorClassIdentifier: 
+  identifier: 21
+  content: "\u6BD2\u306E\u52B9\u679C\u3068\u88AB\u5BB3\u8005\u306E\u4EA1\u304F\u306A\u308A\u65B9\u306F\u4E00\u81F4\u3057\u3066\u3044\u308B\u3088\u3046\u3060\u3002\u6642\u9593\u3092\u9006\u7B97\u3059\u308B\u3068\u3001\u6442\u53D6\u3057\u305F\u306E\u306F\u304A\u305D\u3089\u304F\u663C\u9803\u3060\u308D\u3046\u3002"
+  speaker: 
+  getItem: {fileID: 11400000, guid: 48a88c8b8be6238448222c23eba174b5, type: 2}
+  terms: {fileID: 11400000, guid: 3faa14415ca099540b95149c94077514, type: 2}

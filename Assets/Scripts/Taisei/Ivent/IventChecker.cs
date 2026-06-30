@@ -5,49 +5,36 @@ public class IventChecker : MonoBehaviour
     [SerializeField]
     List<GameObject> ivents;
 
-    [SerializeField]
-    List<GameObject> hiddenIvents;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    public void IventLoad(bool phase,BackPack backPack,Dialog dialog, SoundManager soundManager)
+    
+    public void IventLoad(List<Phase> Passedphase,BackPack backPack,Dialog dialog, SoundManager soundManager)
     {
         if(ivents.Count > 0) {
             foreach (GameObject obj in ivents)
             {
-                obj.SetActive(true);
+                obj.SetActive(false);
 
                 PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
+                int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
+                if (score == 1) //探索済みなら
+                {
+                    continue;
+                }
+                if(iventer.Ivent.Terms != null) //条件がある場合
+                {
+                    if (Passedphase.Contains(iventer.Ivent.Terms))
+                    { //条件を満たしている時
+                        iventer.BackPack = backPack;
+                        iventer.Dialog = dialog;
+                        iventer.SoundManager = soundManager;
+                        obj.SetActive(true);
+                    }
+                    continue;
+                }
+
                 iventer.BackPack = backPack;
                 iventer.Dialog = dialog;
                 iventer.SoundManager = soundManager;
-                int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
-                if (score == 1) //探索済みなら
-                {
-                    obj.SetActive(false);
-                }
-            }
-        }
-        if (!phase)
-        {
-            foreach (GameObject obj in hiddenIvents)
-            {
-                obj.SetActive(false);
-            }
-            return;
-        }
-        if(hiddenIvents.Count > 0) {
-            foreach (GameObject obj in hiddenIvents)
-            {
                 obj.SetActive(true);
-
-                PickUpIventer iventer = obj.GetComponent<PickUpIventer>();
-                iventer.BackPack = backPack;
-                iventer.Dialog = dialog;
-                int score = PlayerPrefs.GetInt("A" + iventer.Ivent.Identifier, 0);
-                if (score == 1) //探索済みなら
-                {
-                    obj.SetActive(false);
-                }
             }
         }
     }
