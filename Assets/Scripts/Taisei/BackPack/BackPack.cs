@@ -20,7 +20,7 @@ public class BackPack : MonoBehaviour
     [SerializeField]
     private CreateItemMenu createMenu;
     [SerializeField]
-    SurveyProgress sp;
+    private SurveyProgress sp;
 
     private bool isCustom = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,6 +40,7 @@ public class BackPack : MonoBehaviour
             int score = PlayerPrefs.GetInt(item.Identifier, 0);
             if (score == 1) //持っている場合
             {
+                Debug.Log("Has" + item.ItemName);
                 AddItem(item);
             }
         }
@@ -55,7 +56,10 @@ public class BackPack : MonoBehaviour
         itemUIList.Add(ui);
         ui.GetComponent<ItemUI>().Initializae(item, this);
 
-        sp.ProgressCheck();
+        if (sp != null)
+        {
+            sp.ProgressCheck();
+        }    
     }
     public void RemoveItem(Item item)
     {
@@ -64,7 +68,7 @@ public class BackPack : MonoBehaviour
 
         for(int i = 0; i < itemUIList.Count;i++)
         {
-            if(itemUIList[i].GetComponent<ItemUI>().item == item)
+            if(itemUIList[i].GetComponent<ItemUI>().Item == item)
             {
                 GameObject obj = itemUIList[i];
                 itemUIList.Remove(obj);

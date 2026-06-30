@@ -13,6 +13,8 @@ public class AriaMove : MonoBehaviour
     Dialog dialog;
     [SerializeField]
     GameObject nowAria;
+    [SerializeField]
+    SoundManager soundManager;
 
     bool isSecondPhase;
 
@@ -32,7 +34,7 @@ public class AriaMove : MonoBehaviour
         Destroy(nowAria);
 
         nowAria = Instantiate(mapList[index],gameObject.transform);
-        nowAria.GetComponent<IventChecker>().IventLoad(isSecondPhase, backpack, dialog);
+        nowAria.GetComponent<IventChecker>().IventLoad(isSecondPhase, backpack, dialog,soundManager);
 
         yield return new WaitForSeconds(0.5f);
         ani.SetTrigger("RightChange");

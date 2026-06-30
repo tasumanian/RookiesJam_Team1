@@ -5,6 +5,7 @@ using UnityEngine;
 public class Debate : ScriptableObject
 {
     [SerializeField]
+    [TextArea(5,5)]
     private string statement;
     public string Statement
     {

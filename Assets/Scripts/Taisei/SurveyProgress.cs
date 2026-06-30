@@ -10,7 +10,7 @@ public class SurveyProgress : MonoBehaviour
     AriaMove ariaMove;
     int nowPhase;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         nowPhase = PlayerPrefs.GetInt("Progress", 0);
         //テスト用
@@ -21,7 +21,7 @@ public class SurveyProgress : MonoBehaviour
 
     public void ProgressCheck()
     {
-        Debug.Log("procheck");
+        Debug.Log("procheck" + nowPhase);
         foreach (Item item in phases[nowPhase].NeedItems)
         {
             int score = PlayerPrefs.GetInt(item.Identifier, 0);

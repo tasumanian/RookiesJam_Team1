@@ -28,4 +28,11 @@ public class SaveData : MonoBehaviour
     {
         PlayerPrefs.SetInt("A" + ivent.Identifier, 1);
     }
+    public static void Inisialize()
+    {
+        //アイテムのリセット
+        //イベントのリセット
+        //メモのリセット
+        //進捗のリセット
+    }
 }

@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ivent: {fileID: 11400000, guid: 852a9bbe829629b4b8e9d5488bb4622d, type: 2}
   backPack: {fileID: 0}
+  SE: {fileID: 8300000, guid: dd7d1896602d77b49901b3019b6713db, type: 3}
   dialog: {fileID: 0}
 --- !u!61 &1967497545471581307
 BoxCollider2D:

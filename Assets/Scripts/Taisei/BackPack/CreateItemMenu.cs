@@ -17,7 +17,7 @@ public class CreateItemMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void CreateItem()
     {
-        if (Aitem.item == null || Bitem.item == null)
+        if (Aitem.Item == null || Bitem.Item == null)
         {
             //合成失敗を表示
             Debug.Log("失敗");
@@ -31,8 +31,8 @@ public class CreateItemMenu : MonoBehaviour
 
             Debug.Log(item.ItemName);
             //素材と選択アイテムが等しい時
-            if ((item.MaterialAItem == Aitem.item && item.MaterialBItem == Bitem.item)
-                || (item.MaterialAItem == Bitem.item && item.MaterialBItem == Aitem.item))
+            if ((item.MaterialAItem == Aitem.Item && item.MaterialBItem == Bitem.Item)
+                || (item.MaterialAItem == Bitem.Item && item.MaterialBItem == Aitem.Item))
             {
                 //アニメーション
 
@@ -44,11 +44,12 @@ public class CreateItemMenu : MonoBehaviour
 
                 button.onClick.AddListener(() => backpack.AddItem(item));
                 button.onClick.AddListener(() => CreatedItem.RemoveDetail());
+                button.onClick.AddListener(() => button.onClick.RemoveAllListeners());
 
                 //アイテム削除
-                backpack.RemoveItem(Aitem.item);
+                backpack.RemoveItem(Aitem.Item);
                 Aitem.RemoveDetail();
-                backpack.RemoveItem(Bitem.item);
+                backpack.RemoveItem(Bitem.Item);
                 Bitem.RemoveDetail();
 
                 return;
@@ -61,24 +62,24 @@ public class CreateItemMenu : MonoBehaviour
     {
         Debug.Log("item" + item);
         //空の場合、アイテムを設定
-        if (Aitem.item == null)
+        if (Aitem.Item == null)
         {
             Aitem.Initializae(item, null);
             return;
         }
         //既にある場合は削除
-        if(Aitem.item == item)
+        if(Aitem.Item == item)
         {
             Aitem.RemoveDetail();
             return;
         }
         //Bも同様
-        if (Bitem.item == null)
+        if (Bitem.Item == null)
         {
             Bitem.Initializae(item, null);
             return;
         }
-        if (Bitem.item == item)
+        if (Bitem.Item == item)
         {
             Bitem.RemoveDetail();
             return;

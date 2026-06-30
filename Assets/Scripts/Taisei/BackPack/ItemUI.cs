@@ -10,7 +10,11 @@ public class ItemUI : MonoBehaviour
     [SerializeField]
     private Button button;
 
-    public Item item;
+    private Item item;
+    public Item Item
+    {
+        get { return item; }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Initializae(Item item, BackPack backpack)
     {

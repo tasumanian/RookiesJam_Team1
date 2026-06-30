@@ -4,8 +4,6 @@ using TMPro;
 
 public class JudgeProgress : MonoBehaviour
 {
-    [SerializeField]
-    private Dialog mydialog;
 
     [SerializeField]
     List<Debate> debateList;
@@ -55,9 +53,9 @@ public class JudgeProgress : MonoBehaviour
         else
         {
             //失敗したときダイアログスクリプトに処理を飛ばす
-            if (mydialog != null)
+            if (dialog != null)
             {
-                mydialog.SetFailureText("私はこの選択で正しいのか……？");
+                dialog.SetFailureText("私はこの選択で正しいのか……？");
             }
 
             // 元の質問に戻す関数
