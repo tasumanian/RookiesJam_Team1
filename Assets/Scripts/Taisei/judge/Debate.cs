@@ -41,6 +41,13 @@ public class Debate : ScriptableObject
     {
         get { return answerItem; }
     }
+    [SerializeField]
+    [TextArea(5, 5)]
+    private string answerText;
+    public string AnswerText
+    {
+        get { return answerText; }
+    }
 }
 public enum DebateAction
 {

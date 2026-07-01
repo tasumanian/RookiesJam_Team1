@@ -32,12 +32,17 @@ public class Dialog : MonoBehaviour
     // 文字が出るスピード（0.1秒）。
     private bool isTextComplete = false;
     // 文字が出終わった状態にするためのスイッチ。
+    private bool isEnd = false;
+    public bool IsEnd
+    {
+        get { return isEnd; }
+    }
 
     void Start()
     {
         currentTextIndex = 0;
         // カウンターを最初の0番目にセットする。
-        StartNewDialog();
+        //StartNewDialog();
         // 新しい文章を表示する処理を呼び出す。
     }
 
@@ -46,6 +51,8 @@ public class Dialog : MonoBehaviour
         if (isTextComplete == false)
         // もし文字が流れている途中なら。
         {
+            isEnd = false;
+
             if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
             // もしスペースキーが押されたら。
             {
@@ -104,6 +111,7 @@ public class Dialog : MonoBehaviour
                         // 逆三角ボタンを隠す。
                         skipGuideScript.ShowEndGuide();
                         // 案内表示を完全に消してもらう。
+                        isEnd = true;
                     }
                 }
             }
@@ -189,6 +197,27 @@ public class Dialog : MonoBehaviour
         // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
 
         currentTextIndex = msgTexts.Count - 1;
+        // カウンターを最後尾の要素番号に設定。
+
+        StartNewDialog();
+        // 上書きした文章で、新しく会話の演出をスタートさせる。
+    }
+    public void TextListSet(string[] texts, string speaker)
+    // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
+    {
+        StopAllCoroutines();
+        // 動いているタイピング演出（コルーチン）をすべて停止する。
+        foreach (string text in texts)
+        {
+            msgTexts.Add(text);
+        }
+        // 引数の文字列をセリフ用リストの末尾に追加。
+
+        speakerNames.Add(speaker);
+        // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
+
+        //currentTextIndex = msgTexts.Count - 1;
+        currentTextIndex = 0;
         // カウンターを最後尾の要素番号に設定。
 
         StartNewDialog();
