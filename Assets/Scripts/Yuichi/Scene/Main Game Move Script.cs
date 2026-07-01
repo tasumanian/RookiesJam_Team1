@@ -16,6 +16,12 @@ public class MainGameMoveScript : MonoBehaviour
     }
     public void StartScene()
     {
+        SaveData.Initialize();
+        SceneManager.LoadScene("MainScene");
+    }
+    public void ContinueScene()
+    {
+
         SceneManager.LoadScene("MainScene");
     }
 }
