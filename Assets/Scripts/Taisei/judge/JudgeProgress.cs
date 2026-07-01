@@ -17,11 +17,32 @@ public class JudgeProgress : MonoBehaviour
 
     [SerializeField]
     Dialog dialog;
+    [SerializeField]
+    private string[] contexts;
+    [SerializeField]
+    private ItemUI item;
+    [SerializeField]
+    private GameObject Text;
+
+    private bool isAnswered = false;
+    private bool isPopup = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        nowProgress = PlayerPrefs.GetInt("Progress", JUDGEPHASE) - JUDGEPHASE;
         DebateStart();
+    }
+    private void Update()
+    {
+        if (isAnswered && dialog.IsEnd)
+        {
+            DebateStart();
+            isAnswered = false;
+        }
+        if (isPopup && dialog.IsEnd)
+        {
+            ButtonPopup();
+            isPopup = false;
+        }
     }
     public void DebateStart() //privateからpublicに変更しました。
     {
@@ -31,15 +52,28 @@ public class JudgeProgress : MonoBehaviour
         //actionに応じて表示
         if (debateList[nowProgress].ActionType == DebateAction.choice)
         {//ボタンの表示
-            for(int count= 0; count < buttons.Length;count++)
+            isPopup = true;
+        }else
+        {
+            foreach (GameObject button in buttons)
             {
-                buttons[count].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text
-                    = debateList[nowProgress].ChoiceText[count];
-
-                buttons[count].SetActive(true);
+                button.SetActive(false);
+           
             }
+            Text.SetActive(true);
         }
     }
+    private void ButtonPopup()
+    {
+        for (int count = 0; count < buttons.Length; count++)
+        {
+            buttons[count].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text
+                = debateList[nowProgress].ChoiceText[count];
+
+            buttons[count].SetActive(true);
+        }
+    }
+
     public void Choise(int index)
     {
         if (debateList[nowProgress].ActionType != DebateAction.choice)
@@ -48,7 +82,12 @@ public class JudgeProgress : MonoBehaviour
         if (debateList[nowProgress].AnswerChoice == index)
         {// 正解なら
             //アニメーションとか入れるかも
+            dialog.TextSet(debateList[nowProgress].AnswerText,"あなた");
             NextDebate();
+            foreach (GameObject button in buttons)
+            {
+                button.SetActive(false);
+            }
         }
         else
         {
@@ -62,15 +101,17 @@ public class JudgeProgress : MonoBehaviour
             DebateStart();
         }
     }
-    public void ShowItem(Item item)
+    public void ShowItem()
     {
     
+
         if (debateList[nowProgress].ActionType != DebateAction.selectitem)
             return;
 
-        if (debateList[nowProgress].AnswerItem == item)
+        if (debateList[nowProgress].AnswerItem == item.Item)
         {// 正解なら
             //アニメーションとか入れるかも
+            dialog.TextSet(debateList[nowProgress].AnswerText, "あなた");
             NextDebate();
         }
         else
@@ -81,11 +122,6 @@ public class JudgeProgress : MonoBehaviour
     public void NextDebate()
     {
         nowProgress++;
-        DebateStart();
-        foreach (GameObject button in buttons)
-        {
-            button.SetActive(false);
-        }
-
+        isAnswered = true;
     }
 }

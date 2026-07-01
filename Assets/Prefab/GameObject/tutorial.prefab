@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ivents: []
+  roomName: "\u307E\u3061\u306A\u304B"
 --- !u!1 &6560045124181299026
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 public class Narrative : MonoBehaviour
 {
     [SerializeField]
@@ -26,6 +24,13 @@ public class Narrative : MonoBehaviour
     private GameObject Screen;
     [SerializeField]
     private SpriteRenderer SR;
+    [SerializeField]
+    private AudioClip SESound;
+    [SerializeField]
+    private AudioClip PopupSound;
+    [SerializeField]
+    private SoundManager soundManager;
+
     private int currentIndex = 0;
     private bool isTutorialStarted = false;
     private bool isTutorialEnded = false;
@@ -33,6 +38,7 @@ public class Narrative : MonoBehaviour
     private void Start()
     {
         NextText();
+        soundManager.PlayBGM(0);
     }
     public void NextText()
     {
@@ -67,8 +73,10 @@ public class Narrative : MonoBehaviour
         if (isTutorialStarted && dialog.IsEnd)
         {
             Screen.SetActive(true);
+            soundManager.PlaySE(PopupSound);
+            soundManager.StopBGM();
             contexts.Add("<color=red>町外れの洋館で起きた化け物による殺人事件の解決</color>");
-            contexts.Add("、、向かうとするか");
+            contexts.Add("向かうとするか、、");
             contexts.Add("はげ");
             SR.sprite = Youkan;
             OpenPanel();
@@ -77,6 +85,7 @@ public class Narrative : MonoBehaviour
         }
         if(isTutorialMid && currentIndex >= contexts.Count)
         {
+            soundManager.StartBGM();
             Screen.SetActive(false);
             Panel.SetActive(false);
             ariaMove.ChangeAria(6);
@@ -86,6 +95,8 @@ public class Narrative : MonoBehaviour
         }
         if (isTutorialEnded && dialog.IsEnd)
         {
+            dialog.TextSet("調査を始めよう", "");
+            soundManager.PlayBGM(1);
             ariaMove.ChangeAria(0);
             isTutorialEnded = false;
         }
@@ -100,7 +111,7 @@ public class Narrative : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(3f);
-      
+        soundManager.PlaySE(SESound);
         tutorialImage.SetActive(true);
     }
 

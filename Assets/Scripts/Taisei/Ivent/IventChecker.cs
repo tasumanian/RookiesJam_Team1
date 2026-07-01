@@ -4,8 +4,13 @@ public class IventChecker : MonoBehaviour
 {
     [SerializeField]
     List<GameObject> ivents;
+    [SerializeField]
+    private string roomName;
+    public string RoomName
+    {
+        get { return roomName; }
+    }
 
-    
     public void IventLoad(List<Phase> Passedphase,BackPack backPack,Dialog dialog, SoundManager soundManager)
     {
         if(ivents.Count > 0) {

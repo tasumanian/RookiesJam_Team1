@@ -22,6 +22,7 @@ public class SaveData : MonoBehaviour
     public static void MemoSave(string memo)
     {
         //メモ帳を保存
+        Debug.Log("メモ帳を保存しました" + memo);
         PlayerPrefs.SetString("Memo", memo);
     }
     public static void CheckIvent(Ivent ivent)
@@ -30,9 +31,6 @@ public class SaveData : MonoBehaviour
     }
     public static void Inisialize()
     {
-        //アイテムのリセット
-        //イベントのリセット
-        //メモのリセット
-        //進捗のリセット
+        PlayerPrefs.DeleteAll();
     }
 }

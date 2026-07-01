@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ivents:
   - {fileID: 5287791629758479731}
+  roomName: "\u30AD\u30C3\u30C1\u30F3"
 --- !u!1 &6560045124181299026
 GameObject:
   m_ObjectHideFlags: 0
