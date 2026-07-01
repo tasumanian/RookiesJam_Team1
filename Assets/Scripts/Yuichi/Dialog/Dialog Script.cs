@@ -44,6 +44,7 @@ public class Dialog : MonoBehaviour
         // カウンターを最初の0番目にセットする。
         //StartNewDialog();
         // 新しい文章を表示する処理を呼び出す。
+        if (speakerNames == null) speakerNames = new List<string>();
     }
 
     void Update()
@@ -122,14 +123,21 @@ public class Dialog : MonoBehaviour
     {
         if (msgTexts.Count == 0) return;
         // リストの中身が空っぽなら、エラーを防ぐために処理をスルーする。
+        
+            isTextComplete = false;
+            // 新しい文章なので、まだ出終わっていない状態にする。
+            DialogText.text = "";
+            // 画面の文字を一度リセットして空にする。
+            button.SetActive(false);
+            // 逆三角ボタンを新しく隠し直す設定。
 
-        isTextComplete = false;
-        // 新しい文章なので、まだ出終わっていない状態にする。
-        DialogText.text = "";
-        // 画面の文字を一度リセットして空にする。
-        button.SetActive(false);
-        // 逆三角ボタンを新しく隠し直す設定。
-    
+            // speakerNamesがnullの場合、要素数チェック時のNullReferenceExceptionを防ぐために初期化する。
+        
+        if (speakerNames == null)
+        {
+            speakerNames = new List<string>();
+        }
+
         if (currentTextIndex < speakerNames.Count)
         // 次の番号の名前が登録されていれば。
         {
@@ -147,6 +155,7 @@ public class Dialog : MonoBehaviour
         StartCoroutine(TypeDisplay());
         // 新しいセリフのタイピング演出をスタートさせる。
     }
+
     public void SetFailureText(string failureMessage)
     {
         // ダイアログをクリアして、失敗セリフを挿入
