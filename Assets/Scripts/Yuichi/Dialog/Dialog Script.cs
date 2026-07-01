@@ -225,8 +225,7 @@ public class Dialog : MonoBehaviour
         speakerNames.Add(speaker);
         // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
 
-        //currentTextIndex = msgTexts.Count - 1;
-        currentTextIndex = 0;
+        currentTextIndex = msgTexts.Count - 1 - (texts.Length -1);
         // カウンターを最後尾の要素番号に設定。
 
         StartNewDialog();

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc875df4054ada4da52cdf813e98665, type: 3}
-  m_Name: CreateDebate 5
+  m_Name: syubunn
   m_EditorClassIdentifier: 
-  statement: 
-  speaker: 
+  statement: "\u7F6A\u72B6\u3092\u8AAD\u307F\u4E0A\u3052\u307E\u3059\u3002\u3042\u306A\u305F\u306F"
+  speaker: "\u3042\u306A\u305F"
   actionType: 0
   choiceText:
-  - 
-  - 
-  - 
-  - 
+  - "\u6BBA\u4EBA"
+  - "\u6D6E\u6C17"
+  - "\u5F37\u76D7"
+  - "\u8A50\u6B3A"
   answerChoice: 0
   answerItem: {fileID: 0}
+  answerText: "\u88AB\u5BB3\u8005\u306E\u6BBA\u4EBA\u306E\u7F6A\u3067\u8D77\u8A34\u3055\u308C\u3066\u3044\u307E\u3059\u3002\n"
