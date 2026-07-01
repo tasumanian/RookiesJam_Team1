@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7854393463142293853}
   - component: {fileID: 478153268936786307}
   m_Layer: 0
-  m_Name: tutorial
+  m_Name: zimusyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,8 +72,8 @@ Transform:
   m_GameObject: {fileID: 6560045124181299026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8615, y: -0.757, z: 0}
-  m_LocalScale: {x: 2.9486709, y: 2.94723, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7854393463142293853}
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5475424386317453631, guid: 2555b24f85f39fb429003fb72f9c993b, type: 3}
+  m_Sprite: {fileID: 3919991551736774147, guid: f40ae3d648638e14da9ff47c98bff993, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
