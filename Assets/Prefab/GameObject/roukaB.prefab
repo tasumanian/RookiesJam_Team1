@@ -141,6 +141,7 @@ MonoBehaviour:
   - {fileID: 7354321863308193962}
   - {fileID: 770257735911282544}
   - {fileID: 5857029639542828190}
+  roomName: "\u308D\u3046\u304BB"
 --- !u!1 &2263413919211706930
 GameObject:
   m_ObjectHideFlags: 0

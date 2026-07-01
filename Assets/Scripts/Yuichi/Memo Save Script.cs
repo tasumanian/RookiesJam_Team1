@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MemoSaveScript : MonoBehaviour
@@ -16,7 +16,10 @@ public class MemoSaveScript : MonoBehaviour
         //表示用テキストのオブジェクトから、TextMeshProのコンポーネントを認識させる。
 
         //追加点
-        text.text = PlayerPrefs.GetString("Memo", "");
+        string savedText = PlayerPrefs.GetString("Memo", "");
+        inputField.text = savedText;
+        text.text = savedText;
+        Debug.Log("メモ帳を読み込みました" + savedText);
     }
 
     void Update()

@@ -12,6 +12,7 @@ public class SurveyProgress : MonoBehaviour
     private Dialog dialog;
     [SerializeField]
     private GameObject button;
+    
     bool[] isProgress;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

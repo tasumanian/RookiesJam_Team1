@@ -9,16 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc875df4054ada4da52cdf813e98665, type: 3}
-  m_Name: CreateDebate 3
+  m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
+  m_Name: yougisya
   m_EditorClassIdentifier: 
-  statement: 
-  speaker: 
-  actionType: 0
-  choiceText:
-  - 
-  - 
-  - 
-  - 
-  answerChoice: 0
-  answerItem: {fileID: 0}
+  identifier: 
+  itemName: 
+  info: 
+  visual: {fileID: 0}
+  attribute: 0
+  materialAItem: {fileID: 0}
+  materialBItem: {fileID: 0}

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc875df4054ada4da52cdf813e98665, type: 3}
-  m_Name: CreateDebate
+  m_Name: hannin
   m_EditorClassIdentifier: 
-  statement: "\u3055\u3044\u3070\u3093\u3092\u958B\u59CB\u3059\u308B\uFF01\n\u306F\u3093\u306B\u3093\u306F\uFF01"
+  statement: "\u88C1\u5224\u3092\u59CB\u3081\u307E\u3059\u3002\u88AB\u544A\u4EBA\u306F"
   speaker: "\u3042\u306A\u305F"
   actionType: 0
   choiceText:
-  - "\u3072\u304C\u3044\u3057\u3083\u306E\u59BB"
+  - "\u606F\u5B50"
   - "\u3057\u3064\u3058\u9577"
-  - "\u3072\u304C\u3044\u3057\u3083\u306E\u606F\u5B50"
-  - "\u308F\u305F\u3057"
+  - "\u3064\u307E"
+  - "\u5316\u3051\u7269"
   answerChoice: 1
   answerItem: {fileID: 0}
+  answerText: "\u88AB\u544A\u4EBA\u306F\u3057\u3064\u3058\u9577\u3002\n\u3042\u306A\u305F\u3067\u3059\uFF01"

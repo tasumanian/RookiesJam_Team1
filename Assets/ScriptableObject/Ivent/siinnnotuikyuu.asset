@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc875df4054ada4da52cdf813e98665, type: 3}
+  m_Name: siinnnotuikyuu
+  m_EditorClassIdentifier: 
+  statement: "\u982D\u306B\u306F\u6253\u64B2\u306E\u8DE1\u304C\u6B8B\u3063\u3066\u3044\u305F\uFF01\u6BB4\u6253\u306B\u3088\u308B\u6BBA\u5BB3\u3067\u306F\u306A\u3044\u306E\u304B\uFF1F\uFF01"
+  speaker: "\u3057\u3064\u3058\u9577"
+  actionType: 1
+  choiceText: []
+  answerChoice: 0
+  answerItem: {fileID: 11400000, guid: e8e839634d7f0d24591a10e43465f49c, type: 2}
+  answerText: "\u78BA\u304B\u306B\u6253\u64B2\u306E\u8DE1\u306F\u6B8B\u3063\u3066\u3044\u307E\u3057\u305F\u3002\u3057\u304B\u3057\u300C\u30AD\u30C3\u30C1\u30F3\u306B\u653E\u7F6E\u3055\u308C\u305F\u7D2B\u8272\u306E\u74F6\u300D\u304C\u3042\u3063\u305F\u3053\u3068\u3001\u300C\u88AB\u5BB3\u8005\u306E\u72B6\u6CC1\u300D\u304B\u3089\u6B7B\u56E0\u306F\u6BD2\u6BBA\u3067\u3059\n\u8272\u306E\u74F6\u306B\u306F\u300C\u30A2\u30DE\u30CB\u30C1\u30F3\u300D\u3068\u3044\u3046\u6BD2\u304C\u5165\u3063\u3066\u304A\u308A\u3001\u88AB\u5BB3\u8005\u306E\u6B7B\u4EA1\u72B6\u6CC1\u3068\u3082\u6BD2\u306E\u52B9\u679C\u304C\u4E00\u81F4\u3057\u3066\u3044\u308B\u305F\u3081\u6BD2\u6BBA\u3068\u8003\u3048\u3089\u308C\u307E\u3059\n"
