@@ -29,7 +29,7 @@ public class SaveData : MonoBehaviour
     {
         PlayerPrefs.SetInt("A" + ivent.Identifier, 1);
     }
-    public static void Inisialize()
+    public static void Initialize()
     {
         PlayerPrefs.DeleteAll();
     }

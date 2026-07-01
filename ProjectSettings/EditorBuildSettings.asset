@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JudgeScene.unity
     guid: b21331db5af233745909541d8ba79e3a
+  - enabled: 1
+    path: Assets/Scenes/EndRollScene.unity
+    guid: 7e37273d4d5d0b14dbb778f1d91dcf69
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

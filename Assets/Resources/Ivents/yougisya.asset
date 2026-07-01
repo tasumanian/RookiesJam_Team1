@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ffbdc6900d64aa43848c3520951a617, type: 3}
+  m_Script: {fileID: 11500000, guid: 52a35bd3447dba3419c915bbeb846c6d, type: 3}
   m_Name: yougisya
   m_EditorClassIdentifier: 
-  identifier: 
-  itemName: 
-  info: 
-  visual: {fileID: 0}
-  attribute: 0
-  materialAItem: {fileID: 0}
-  materialBItem: {fileID: 0}
+  identifier: 22
+  content: "\u3051\u3044\u3055\u3064\u306E\u53D6\u308A\u8ABF\u3079\u3067\u308F\u304B\u3063\u3066\u3044\u308B\u3053\u3068\u304C\u3042\u308B\u3088\u3046\u3060\u3002\n\u3088\u3046\u304E\u8005\u306F\u4E09\u4EBA\u3044\u308B\u3088\u3046\u3060\u3002"
+  speaker: "\u3051\u3044\u3055\u3064"
+  getItem: {fileID: 11400000, guid: c583bce8091ae4d469d6735e8d5150c1, type: 2}
+  terms: {fileID: 0}

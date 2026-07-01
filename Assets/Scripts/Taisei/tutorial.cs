@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 public class Narrative : MonoBehaviour
 {
     [SerializeField]
@@ -21,9 +22,10 @@ public class Narrative : MonoBehaviour
     [SerializeField]
     private Sprite Youkan;
     [SerializeField]
-    private GameObject Screen;
+    private GameObject screen;
     [SerializeField]
-    private SpriteRenderer SR;
+    private SpriteRenderer sR;
+    public SpriteRenderer SR { get { return sR; } }
     [SerializeField]
     private AudioClip SESound;
     [SerializeField]
@@ -35,10 +37,13 @@ public class Narrative : MonoBehaviour
     private bool isTutorialStarted = false;
     private bool isTutorialEnded = false;
     private bool isTutorialMid = false;
-    private void Start()
+    public void StartTutorial()
     {
+        Panel.SetActive(true);
         NextText();
         soundManager.PlayBGM(0);
+
+        SaveData.SaveProgress(-1);
     }
     public void NextText()
     {
@@ -72,13 +77,13 @@ public class Narrative : MonoBehaviour
     {
         if (isTutorialStarted && dialog.IsEnd)
         {
-            Screen.SetActive(true);
+            screen.SetActive(true);
             soundManager.PlaySE(PopupSound);
             soundManager.StopBGM();
             contexts.Add("<color=red>町外れの洋館で起きた化け物による殺人事件の解決</color>");
             contexts.Add("向かうとするか、、");
             contexts.Add("はげ");
-            SR.sprite = Youkan;
+            sR.sprite = Youkan;
             OpenPanel();
             isTutorialStarted = false;
             isTutorialMid = true;
@@ -86,7 +91,7 @@ public class Narrative : MonoBehaviour
         if(isTutorialMid && currentIndex >= contexts.Count)
         {
             soundManager.StartBGM();
-            Screen.SetActive(false);
+            screen.SetActive(false);
             Panel.SetActive(false);
             ariaMove.ChangeAria(6);
             StartCoroutine(Wait());
