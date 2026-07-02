@@ -32,7 +32,8 @@ public class Narrative : MonoBehaviour
     private AudioClip PopupSound;
     [SerializeField]
     private SoundManager soundManager;
-
+    [SerializeField]
+    private TMP_FontAsset font;
     private int currentIndex = 0;
     private bool isTutorialStarted = false;
     private bool isTutorialEnded = false;
@@ -78,6 +79,7 @@ public class Narrative : MonoBehaviour
             screen.SetActive(true);
             soundManager.PlaySE(PopupSound);
             soundManager.StopBGM();
+            text.font = font;
             contexts.Add("<color=red>町外れの洋館で起きた化け物による殺人事けんのかい決</color>");
             contexts.Add("向かうとするか、、");
             contexts.Add("はげ");
