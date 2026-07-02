@@ -33,7 +33,7 @@ public class JudgeProgress : MonoBehaviour
     {
         DebateStart();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (isAnswered && dialog.IsEnd)
         {

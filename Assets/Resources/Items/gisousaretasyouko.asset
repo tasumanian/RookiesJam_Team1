@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: gisousaretasyouko
   m_EditorClassIdentifier: 
   identifier: 20
-  itemName: "\u507D\u88C5\u306E\u53EF\u80FD\u6027"
-  info: "\u30DE\u30B9\u30BF\u30FC\u30AD\u30FC\u304C\u3042\u308C\u3070\u3001\u606F\u5B50\u306E\u90E8\u5C4B\u306B\u5B9D\u77F3\u3092\u7F6E\u3044\u3066\u304A\u304F\u3053\u3068\u306F\u53EF\u80FD\u3060\u308D\u3046\u3002"
+  itemName: "\u304E\u305D\u3046\u306E\u304B\u306E\u3046\u305B\u3044"
+  info: "\u30DE\u30B9\u30BF\u30FC\u30AD\u30FC\u304C\u3042\u308C\u3070\u3001\u606F\u5B50\u306E\u90E8\u5C4B\u306B\u307B\u3046\u77F3\u3092\u7F6E\u3044\u3066\u304A\u304F\u3053\u3068\u306F\u304B\u306E\u3046\u3060\u308D\u3046\u3002"
   visual: {fileID: 4210626786328978904, guid: f6b30aea7baaea3498d3746afb1b4803, type: 3}
   attribute: 2
   materialAItem: {fileID: 11400000, guid: 6d3af38342e36da42a0f69941e40932c, type: 2}
