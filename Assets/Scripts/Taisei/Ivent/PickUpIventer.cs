@@ -52,7 +52,7 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
 
         soundManager.PlaySE(SE);
 
-        dialog.TextSet(ivent.Content,ivent.Speaker);
+        dialog.TextListSet(ivent.Content,ivent.Speaker);
 
         SaveData.CheckIvent(ivent);
 

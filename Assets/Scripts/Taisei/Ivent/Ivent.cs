@@ -11,8 +11,8 @@ public class Ivent : ScriptableObject
     }
     [SerializeField]
     [TextArea(5, 5)]
-    private string content;
-    public string Content
+    private string[] content;
+    public string[] Content
     {
         get { return content; }
     }
