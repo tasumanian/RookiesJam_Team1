@@ -18,6 +18,8 @@ public class SurveyProgress : MonoBehaviour
     private Narrative narrative;
     [SerializeField]
     private Sprite defaultsc;
+    [SerializeField]
+    private SoundManager soundManager;
 
     bool[] isProgress;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -57,6 +59,7 @@ public class SurveyProgress : MonoBehaviour
         else
         {
             narrative.StartTutorial();
+            soundManager.PlayBGM(1);
         }
     }
     public void ProgressCheck()
