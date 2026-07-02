@@ -80,7 +80,7 @@ public class Narrative : MonoBehaviour
             screen.SetActive(true);
             soundManager.PlaySE(PopupSound);
             soundManager.StopBGM();
-            contexts.Add("<color=red>町外れの洋館で起きた化け物による殺人事件の解決</color>");
+            contexts.Add("<color=red>町外れの洋館で起きた化け物による殺人事けんのかい決</color>");
             contexts.Add("向かうとするか、、");
             contexts.Add("はげ");
             sR.sprite = Youkan;
