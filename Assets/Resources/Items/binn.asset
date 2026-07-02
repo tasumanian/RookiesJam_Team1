@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: binn
   m_EditorClassIdentifier: 
   identifier: 16
-  itemName: "\u7D2B\u8272\u306E\u74F6"
-  info: "\u4E2D\u8EAB\u306F\u5165\u3063\u3066\u3044\u306A\u3044\u3002\u55C5\u3050\u3068\u5F37\u70C8\u306A\u523A\u6FC0\u81ED\u304C\u3059\u308B"
+  itemName: "\u30E0\u30E9\u30B5\u30AD\u8272\u306E\u30D3\u30F3"
+  info: "\u4E2D\u8EAB\u306F\u5165\u3063\u3066\u3044\u306A\u3044\u3002\u304B\u3050\u3068\u5F37\u308C\u3064\u306A\u3057\u3052\u304D\u3057\u3085\u3046\u304C\u3059\u308B"
   visual: {fileID: -8985209635621461076, guid: f8153fa2c32d20e41944dd86de976926, type: 3}
   attribute: 1
   materialAItem: {fileID: 0}
