@@ -35,7 +35,7 @@ public class SurveyProgress : MonoBehaviour
                 {
                     dialog.TextSet(phases[isProgress.Length - 1].Context, "");
                     //裁判フェーズへ
-                    //button.SetActive(true);
+                    button.SetActive(true);
 
                 }
             }

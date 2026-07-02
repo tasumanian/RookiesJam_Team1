@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc875df4054ada4da52cdf813e98665, type: 3}
   m_Name: houhou
   m_EditorClassIdentifier: 
-  statement: "\u3042\u306A\u305F\u306F\u3072\u5BB3\u8005\u3092"
+  statement: "\u3042\u306A\u305F\u306F\u88AB\u5BB3\u8005\u3092"
   speaker: "\u3042\u306A\u305F"
   actionType: 0
   choiceText:
   - "\u30CF\u30F3\u30DE\u30FC"
-  - "\u306F\u3044\u76BF"
+  - "\u7070\u76BF"
   - "\u6BD2"
   - "\u5316\u3051\u7269"
   answerChoice: 2
   answerItem: {fileID: 0}
-  answerText: "\u3092\u7528\u3044\u3066\u6BBA\u5BB3\u3057\u307E\u3057\u305F\u306D\u3002"
+  answerText: "\u6BD2\u3092\u7528\u3044\u3066\u6BBA\u5BB3\u3057\u307E\u3057\u305F\u306D\u3002"
