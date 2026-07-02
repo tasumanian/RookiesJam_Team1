@@ -42,8 +42,6 @@ public class Narrative : MonoBehaviour
         Panel.SetActive(true);
         NextText();
         soundManager.PlayBGM(0);
-
-        SaveData.SaveProgress(-1);
     }
     public void NextText()
     {
@@ -87,6 +85,7 @@ public class Narrative : MonoBehaviour
             OpenPanel();
             isTutorialStarted = false;
             isTutorialMid = true;
+            SaveData.SaveProgress(-1);
         }
         if(isTutorialMid && currentIndex >= contexts.Count)
         {
