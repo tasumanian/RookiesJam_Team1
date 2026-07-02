@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class JudgeProgress : MonoBehaviour
@@ -26,6 +27,7 @@ public class JudgeProgress : MonoBehaviour
 
     private bool isAnswered = false;
     private bool isPopup = false;
+    private bool isEnd = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,9 +45,21 @@ public class JudgeProgress : MonoBehaviour
             ButtonPopup();
             isPopup = false;
         }
+        if (isEnd && dialog.IsEnd)
+        {
+            //エンドロール
+            SceneManager.LoadScene("EndRollScene");
+            isEnd = false;
+        }
     }
     public void DebateStart() //privateからpublicに変更しました。
     {
+        if(nowProgress >= debateList.Count)
+        {
+            dialog.TextListSet(contexts, "");
+            isEnd = true;
+            return;
+        }
         //相手の供述を表示
         dialog.TextSet(debateList[nowProgress].Statement, debateList[nowProgress].Speaker);
 
@@ -116,7 +130,13 @@ public class JudgeProgress : MonoBehaviour
         }
         else
         {
-            //失敗
+            if(dialog != null)
+            {
+                dialog.SetFailureText("私はこの選択で正しいのか……？");
+            }
+
+            // 元の質問に戻す関数
+            DebateStart();
         }
     }
     public void NextDebate()

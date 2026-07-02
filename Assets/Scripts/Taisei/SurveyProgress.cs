@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using static UnityEditorInternal.ReorderableList;
 
 public class SurveyProgress : MonoBehaviour
 {
@@ -12,7 +14,11 @@ public class SurveyProgress : MonoBehaviour
     private Dialog dialog;
     [SerializeField]
     private GameObject button;
-    
+    [SerializeField]
+    private Narrative narrative;
+    [SerializeField]
+    private Sprite defaultsc;
+
     bool[] isProgress;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -25,14 +31,34 @@ public class SurveyProgress : MonoBehaviour
             if(isproceed == 1)
             {
                 isProgress[i] = true;
-            }else
+                if (isProgress[isProgress.Length - 1])
+                {
+                    dialog.TextSet(phases[isProgress.Length - 1].Context, "");
+                    //裁判フェーズへ
+                    button.SetActive(true);
+
+                }
+            }
+            else
             {
                 isProgress[i] = false;
             }
         }
         //テスト用
     }
-
+    void Start()
+    {
+        int progress = PlayerPrefs.GetInt("-1", 0);
+        if(progress == 1)
+        {
+            narrative.SR.sprite = defaultsc;
+            ariaMove.ChangeAria(0);
+        }
+        else
+        {
+            narrative.StartTutorial();
+        }
+    }
     public void ProgressCheck()
     {
         bool breakFlag = false;
