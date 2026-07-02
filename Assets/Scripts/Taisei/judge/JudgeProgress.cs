@@ -14,8 +14,6 @@ public class JudgeProgress : MonoBehaviour
     [SerializeField]
     GameObject[] buttons;
 
-    private const int JUDGEPHASE = 5;
-
     [SerializeField]
     Dialog dialog;
     [SerializeField]
@@ -31,6 +29,7 @@ public class JudgeProgress : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        nowProgress = 0;
         DebateStart();
     }
     private void FixedUpdate()
@@ -117,8 +116,9 @@ public class JudgeProgress : MonoBehaviour
     }
     public void ShowItem()
     {
-    
 
+        if (nowProgress > debateList.Count-1)
+            return;
         if (debateList[nowProgress].ActionType != DebateAction.selectitem)
             return;
 
