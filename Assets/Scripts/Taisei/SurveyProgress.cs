@@ -26,7 +26,7 @@ public class SurveyProgress : MonoBehaviour
         isProgress = new bool[phases.Count];
         for (int i = 0; i < isProgress.Length;i++)
         {
-            int isproceed = PlayerPrefs.GetInt(i.ToString(), 0);
+            int isproceed = PlayerPrefs.GetInt("P" + i.ToString(), 0);
 
             if(isproceed == 1)
             {
@@ -35,7 +35,7 @@ public class SurveyProgress : MonoBehaviour
                 {
                     dialog.TextSet(phases[isProgress.Length - 1].Context, "");
                     //裁判フェーズへ
-                    button.SetActive(true);
+                    //button.SetActive(true);
 
                 }
             }
