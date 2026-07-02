@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: monooto
   m_EditorClassIdentifier: 
   identifier: 0
-  itemName: "\u59BB\u306E\u90E8\u5C4B\u304B\u3089\u7269\u97F3"
-  info: "16:00\u6642\u9803\u3001\u88AB\u5BB3\u8005\u306E\u59BB\u306E\u90E8\u5C4B\u304B\u3089\u4F55\u304B\u3092\u6F01\u308B\u3088\u3046\u306A\u7269\u97F3"
+  itemName: "\u3064\u307E\u306E\u90E8\u5C4B\u304B\u3089\u7269\u97F3"
+  info: "16:00\u6642\u3054\u308D\u3001\u3072\u5BB3\u8005\u306E\u3064\u307E\u306E\u90E8\u5C4B\u304B\u3089\u4F55\u304B\u3092\u6F01\u308B\u3088\u3046\u306A\u7269\u97F3"
   visual: {fileID: 381090743, guid: 1aead2644fccc4948bc67b2afad88b98, type: 3}
   attribute: 0
   materialAItem: {fileID: 0}
