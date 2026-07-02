@@ -280,6 +280,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1601218377715426606, guid: 42797b4af1fb66f4193233ef44954308, type: 3}
   m_PrefabInstance: {fileID: 26701833}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &26701836 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2454652664919556120, guid: 42797b4af1fb66f4193233ef44954308, type: 3}
+  m_PrefabInstance: {fileID: 26701833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &28845402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,7 +3760,7 @@ MonoBehaviour:
   dialog: {fileID: 1416237619}
   button: {fileID: 1857316843}
   narrative: {fileID: 2070972026}
-  defaultsc: {fileID: 0}
+  defaultsc: {fileID: -4119978061144286012, guid: 79c4acdacccc6244a93e33533b017782, type: 3}
 --- !u!4 &684826419
 Transform:
   m_ObjectHideFlags: 0
@@ -5611,7 +5616,7 @@ GameObject:
   - component: {fileID: 1048694877}
   - component: {fileID: 1048694876}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: YoukanImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12181,8 +12186,8 @@ MonoBehaviour:
   tutorialImage: {fileID: 195498595}
   ariaMove: {fileID: 664070374}
   Youkan: {fileID: 7148805806004306427, guid: dac7af02116e8e04e9e9f9df819c6cbd, type: 3}
-  screen: {fileID: 0}
-  sR: {fileID: 0}
+  screen: {fileID: 1048694874}
+  sR: {fileID: 26701836}
   SESound: {fileID: 8300000, guid: f78fecbe46cbf5048ba3d8baa60979a8, type: 3}
   PopupSound: {fileID: 8300000, guid: cf96e8ad0dc0eca44897837f4f40414b, type: 3}
   soundManager: {fileID: 237783495}
