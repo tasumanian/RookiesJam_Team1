@@ -48,7 +48,7 @@ public class SurveyProgress : MonoBehaviour
     }
     void Start()
     {
-        int progress = PlayerPrefs.GetInt("-1", 0);
+        int progress = PlayerPrefs.GetInt("P-1", 0);
         if(progress == 1)
         {
             narrative.SR.sprite = defaultsc;
