@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 25
   itemName: "\u30EC\u30B3\u30FC\u30C0\u30FC\u306E\u6301\u3061\u4E3B"
-  info: "\u3053\u306E\u30EC\u30B3\u30FC\u30C0\u30FC\u306E\u6301\u3061\u4E3B\u306F\u57F7\u4E8B\u9577\u3068\u306E\u3053\u3068\u3060"
+  info: "\u3053\u306E\u30EC\u30B3\u30FC\u30C0\u30FC\u306E\u6301\u3061\u4E3B\u306F\u3057\u3064\u4E8B\u9577\u3068\u306E\u3053\u3068\u3060"
   visual: {fileID: 4767448740184429733, guid: 575a3856d5cfcf24781c7febd4037ae5, type: 3}
   attribute: 1
   materialAItem: {fileID: 0}
