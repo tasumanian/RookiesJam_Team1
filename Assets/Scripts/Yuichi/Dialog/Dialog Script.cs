@@ -196,6 +196,8 @@ public class Dialog : MonoBehaviour
     public void TextSet(string text , string speaker)
     // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
     {
+        isEnd = false;
+
         StopAllCoroutines();
         // 動いているタイピング演出（コルーチン）をすべて停止する。
 
@@ -214,6 +216,8 @@ public class Dialog : MonoBehaviour
     public void TextListSet(string[] texts, string speaker)
     // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
     {
+        isEnd = false;
+
         StopAllCoroutines();
         // 動いているタイピング演出（コルーチン）をすべて停止する。
         foreach (string text in texts)
