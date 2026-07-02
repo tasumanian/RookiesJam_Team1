@@ -3761,7 +3761,7 @@ MonoBehaviour:
   button: {fileID: 1857316843}
   narrative: {fileID: 2070972026}
   defaultsc: {fileID: -4119978061144286012, guid: 79c4acdacccc6244a93e33533b017782, type: 3}
-  soundManager: {fileID: 237783495}
+  soundManager: {fileID: 0}
 --- !u!4 &684826419
 Transform:
   m_ObjectHideFlags: 0
@@ -12192,11 +12192,7 @@ MonoBehaviour:
   SESound: {fileID: 8300000, guid: f78fecbe46cbf5048ba3d8baa60979a8, type: 3}
   PopupSound: {fileID: 8300000, guid: cf96e8ad0dc0eca44897837f4f40414b, type: 3}
   soundManager: {fileID: 237783495}
-<<<<<<< Updated upstream
   font: {fileID: 11400000, guid: 48f97a52937f8f74186a7d1b46719a3b, type: 2}
-=======
-  font: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &2080433547
 GameObject:
   m_ObjectHideFlags: 0
