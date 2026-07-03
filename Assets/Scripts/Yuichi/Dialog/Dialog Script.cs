@@ -226,7 +226,10 @@ public class Dialog : MonoBehaviour
         }
         // 引数の文字列をセリフ用リストの末尾に追加。
 
-        speakerNames.Add(speaker);
+        foreach (string text in texts)
+        {
+            speakerNames.Add(speaker);
+        }
         // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
 
         currentTextIndex = msgTexts.Count - 1 - (texts.Length -1);
