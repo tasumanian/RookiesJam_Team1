@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class SaveData : MonoBehaviour
 {
@@ -27,10 +26,12 @@ public class SaveData : MonoBehaviour
     }
     public static void CheckIvent(Ivent ivent)
     {
+        //1は所持していることを表す
         PlayerPrefs.SetInt("A" + ivent.Identifier, 1);
     }
     public static void Initialize()
     {
         PlayerPrefs.DeleteAll();
+        //全初期化
     }
 }
