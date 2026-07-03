@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class PickUpIventer : MonoBehaviour , IPointerClickHandler
 {
+    //実行するイベント
     [SerializeField]
     Ivent ivent;
     public Ivent Ivent
@@ -16,14 +17,15 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
     {
         set { backPack = value; }
     }
+
     [SerializeField]
     private AudioClip SE;
-
     private SoundManager soundManager;
     public SoundManager SoundManager
     {
         set { soundManager = value; }
     }
+
     [SerializeField]
     Dialog dialog;
     public Dialog Dialog
@@ -31,32 +33,29 @@ public class PickUpIventer : MonoBehaviour ,IPointerEnterHandler, IPointerExitHa
         set {  dialog = value; }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-       // Debug.Log("hoge");
-    }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-       // Debug.Log("hoge");
-    }
     public void OnPointerClick(PointerEventData eventData)
     {
+        //クリックされたらイベントを実行
         ActionIvent();
     }
     public void ActionIvent()
     {
-        //イベント実行
+
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
         backPack.AddItem(ivent.GetItem);
+        //イベントに設定されたアイテムを入手
 
         soundManager.PlaySE(SE);
 
         dialog.TextListSet(ivent.Content,ivent.Speaker);
+        //ダイアログにテキストを入力
 
         SaveData.CheckIvent(ivent);
+        //イベント終了をセーブ
 
         gameObject.SetActive(false);
+        //非表示化
     }
 
 }
