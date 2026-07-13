@@ -94,10 +94,10 @@ public class SurveyProgress : MonoBehaviour
 
             foreach (Item item in phases[i].NeedItems)
             {
-                int score = PlayerPrefs.GetInt(item.Identifier, 0);
+                int score = PlayerPrefs.GetInt("I" + item.Identifier, 0);
                 if (score == 0) //条件を満たしていない場合
                 {
-                    Debug.Log(item.Identifier);
+                    Debug.Log("I" + item.Identifier);
                     breakFlag = true;
                     break;
                 }

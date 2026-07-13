@@ -20,10 +20,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60c24c5eb2d264949ad7d34a697428ab, type: 2}
   - {fileID: 11400000, guid: 050776d89529f794d90be1f540f57f64, type: 2}
   - {fileID: 11400000, guid: 10368d3d6d76ae04cae166da704e2d24, type: 2}
-  - {fileID: 11400000, guid: 50047355baa08504eaa6bebf17e934c7, type: 2}
-  - {fileID: 11400000, guid: c8aa637bcc6d9c8489da77a1f0400537, type: 2}
-  - {fileID: 11400000, guid: e47b74eda283e1d4bbd9b1dc13af2c3f, type: 2}
   - {fileID: 11400000, guid: 8befdca2f15291240a50ba7613a495b7, type: 2}
-  - {fileID: 11400000, guid: 5efe8e87181bd434c98f7b0d72e8d48d, type: 2}
   - {fileID: 11400000, guid: 282603cd2d4a0c34d9ac8a9d6bef54aa, type: 2}
+  - {fileID: 11400000, guid: 94c409a97be8e6049a7ec19b02bf32f4, type: 2}
+  - {fileID: 11400000, guid: 9ef389cc09f9cec499e193c467bca879, type: 2}
   context: "\u3053\u308C\u307E\u3067\u306E\u8ABF\u67FB\u3067\u3001\u6C17\u306B\u306A\u308B\u3053\u3068\u304C\u3044\u304F\u3064\u304B\u3042\u3063\u305F\u306A\u3002\u3002\u3082\u3046\u4E00\u5EA6\u635C\u67FB\u3057\u3066\u307F\u3088\u3046"
