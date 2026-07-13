@@ -12,7 +12,7 @@ public class SaveData : MonoBehaviour
     public static void RemoveItem(Item item)//アイテムの削除
     {
 
-        PlayerPrefs.DeleteKey(item.Identifier);
+        PlayerPrefs.DeleteKey("I" + item.Identifier);
         //アイテムを削除
     }
     public static void SaveProgress(int progress)
