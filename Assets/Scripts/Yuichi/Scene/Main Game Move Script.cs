@@ -24,6 +24,6 @@ public class MainGameMoveScript : MonoBehaviour
         Application.Quit();
 
         //エディター上で止める用
-        UnityEditor.EditorApplication.isPlaying = false;
+       // UnityEditor.EditorApplication.isPlaying = false;
     }
 }
