@@ -88,7 +88,7 @@ public class JudgeProgress : MonoBehaviour
     }
     public void DebateStart() //privateからpublicに変更しました。
     {
-        if(nowProgress >= debateList.Count)
+        if(nowProgress > debateList.Count)
         {
             //討論が終了したら
 
