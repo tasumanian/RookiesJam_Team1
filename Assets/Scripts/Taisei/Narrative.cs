@@ -6,18 +6,29 @@ public class Narrative : MonoBehaviour
 {
     [SerializeField]
     private List<string> contexts;
+    //地のふみ用のテキストリスト
+
     [SerializeField]
     private int cutTiming;
+    //地のふみの切り替えタイミング
+
     [SerializeField]
     private TextMeshProUGUI text;
     [SerializeField]
     private Dialog dialog;
+
     [SerializeField]
     private string[] tutorialTexts;
+    //プレイヤーが喋る用のテキスト
+
     [SerializeField]
     private GameObject Panel;
+    //地のふみのGameObj
+
     [SerializeField]
     private GameObject tutorialImage;
+    //チュートリアル用画像
+
     [SerializeField]
     private AriaMove ariaMove;
     [SerializeField]

@@ -46,7 +46,7 @@ public class BackPack : MonoBehaviour
 
         foreach (Item item in itemData)
         {
-            int score = PlayerPrefs.GetInt(item.Identifier, 0);
+            int score = PlayerPrefs.GetInt("I" + item.Identifier, 0);
 
             if (score == 1) //持っている場合
             {
