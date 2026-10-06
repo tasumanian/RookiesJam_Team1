@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: yougisya
   m_EditorClassIdentifier: 
   identifier: 27
-  itemName: "\u3088\u3046\u304E\u8005\u30EA\u30B9\u30C8"
-  info: "\u3088\u3046\u304E\u8005\u306F\u300C\u3064\u307E\u300D\u3001\u300C\u606F\u5B50\u300D\u3001\u300C\u3057\u3064\u3058\u9577\u300D\u306E\u3088\u3046\u3060"
+  itemName: "\u5BB9\u7591\u8005\u30EA\u30B9\u30C8"
+  info: "\u5BB9\u7591\u8005\u306F\u300C\u59BB\u300D\u3001\u300C\u606F\u5B50\u300D\u3001\u300C\u57F7\u4E8B\u9577\u300D\u306E\u3088\u3046\u3060"
   visual: {fileID: -1489599865, guid: 2d025092e8e19a348878367d7fa65f37, type: 3}
   attribute: 0
   materialAItem: {fileID: 0}

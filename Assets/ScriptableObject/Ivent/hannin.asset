@@ -18,7 +18,7 @@ MonoBehaviour:
   choiceText:
   - "\u606F\u5B50"
   - "\u57F7\u4E8B\u9577"
-  - "\u3064\u307E"
+  - "\u59BB"
   - "\u5316\u3051\u7269"
   answerChoice: 1
   answerItem: {fileID: 0}

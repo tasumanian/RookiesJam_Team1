@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: siinnnotuikyuu
   m_EditorClassIdentifier: 
   statement: "\u982D\u306B\u306F\u6253\u64B2\u306E\u3042\u3068\u304C\u6B8B\u3063\u3066\u3044\u305F\uFF01\u6BB4\u6253\u306B\u3088\u308B\u6BBA\u5BB3\u3067\u306F\u306A\u3044\u306E\u304B\uFF1F\uFF01"
-  speaker: "\u3057\u3064\u3058\u9577"
+  speaker: "\u57F7\u4E8B\u9577"
   actionType: 1
   choiceText: []
   answerChoice: 0
