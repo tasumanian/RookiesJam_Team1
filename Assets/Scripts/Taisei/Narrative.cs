@@ -108,7 +108,7 @@ public class Narrative : MonoBehaviour
                 //館の表示終了
                 ariaMove.ChangeAria(6);
                 //街中シーンへ移行
-                StartCoroutine(Wait());
+                StartCoroutine(MoveCity());
 
                 State = TutorialState.NotReady;
             }
@@ -148,12 +148,13 @@ public class Narrative : MonoBehaviour
         {
             SaveData.SaveProgress(-1); //進行度を保存
 
-            dialog.TextSet("調査を始めよう", "");
-            soundManager.PlayBGM(1);
-
             //捜査シーンへ
             ariaMove.ChangeAria(0);
+
+            StartCoroutine(MoveHall());
+
             State = TutorialState.NotReady;
+
         }
     }
     public void EndTutorial() //操作説明終了
@@ -164,15 +165,22 @@ public class Narrative : MonoBehaviour
         tutorialImage.SetActive(false);
 
     }
-    IEnumerator Wait()
+    IEnumerator MoveCity()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         //シーン変更まで待機
 
         soundManager.PlaySE(SESound);
         //街中の騒音っぽいやつ
         tutorialImage.SetActive(true);
         //操作説明の表示
+    }
+    IEnumerator MoveHall()
+    {
+        yield return new WaitForSeconds(2f);
+        //シーン変更まで待機
+        dialog.TextSet("調査を始めよう", "");
+        soundManager.PlayBGM(1);
     }
 
 }
