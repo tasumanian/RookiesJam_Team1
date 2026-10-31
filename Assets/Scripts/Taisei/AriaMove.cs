@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class AriaMove : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class AriaMove : MonoBehaviour
     List<GameObject> mapList;
     //マップが格納されているリスト
     [SerializeField]
-    Animator ani;
+    CanvasGroup fadePanel;
     //暗転、光転するアニメーション
     [SerializeField]
     BackPack backpack;
@@ -26,36 +27,80 @@ public class AriaMove : MonoBehaviour
     int nowIndex = 0;
     //現在のマップのindex
     public List<Phase> passedPhase;
+
+    [SerializeField]
+    private AudioClip clip;
     // 完了したフェーズのリスト
+
+    static bool isMoving = false;
 
     IEnumerator ChangeAnimation(int index)
     {
-        ani.SetTrigger("BrackOut");
-        yield return new WaitForSeconds(1.5f);
-        //暗転
+        if (isMoving)
+        {
+            yield return null;
+        }
+        else
+        {
+            isMoving = true;
+            if(!(index == 6 || index == 7))
+            { 
+                soundManager.PlaySE(clip);
+            }
 
-        Destroy(nowAria);
-        //現在のマップを削除
+            StartCoroutine(FadeOut());
 
-        nowAria = Instantiate(mapList[index],gameObject.transform);
-        nowAria.GetComponent<IventChecker>().IventLoad(passedPhase, backpack, dialog,soundManager);
-        roomName.text = nowAria.GetComponent<IventChecker>().RoomName;
-        //新しいマップを生成、イベントロード、Name取得
+            yield return new WaitForSeconds(1f);
+            //暗転
 
-        yield return new WaitForSeconds(0.5f);
-        ani.SetTrigger("RightChange");
-        //光転
+            Destroy(nowAria);
+            //現在のマップを削除
+
+            nowAria = Instantiate(mapList[index], gameObject.transform);
+            nowAria.GetComponent<IventChecker>().IventLoad(passedPhase, backpack, dialog, soundManager);
+            roomName.text = nowAria.GetComponent<IventChecker>().RoomName;
+            //新しいマップを生成、イベントロード、Name取得
+
+            yield return new WaitForSeconds(0.2f);
+
+            StartCoroutine(FadeIn());
+            //光転
+            isMoving = false;
+        }
     }
     public void ChangeAria(int index) //こっちで受け取ってから、アニメーションに投げる
     {
+        if(nowIndex == index)
+        {
+            return;
+        }
         if (index == -1) //-1は現在のマップを再度表示する
         {
             StartCoroutine(ChangeAnimation(nowIndex));
+
         }
         else
         {
             StartCoroutine(ChangeAnimation(index));
             nowIndex = index;
         }
+    }
+    private IEnumerator FadeOut()
+    {
+        fadePanel.gameObject.SetActive(true);
+        for (float i = 0; i < 1; i += Time.unscaledDeltaTime)
+        {
+            fadePanel.alpha = i;
+            yield return null;
+        }
+    }
+    private IEnumerator FadeIn()
+    {
+        for (float i = 1; i > 0; i -= Time.unscaledDeltaTime)
+        {
+            fadePanel.alpha = i;
+            yield return null;
+        }
+        fadePanel.gameObject.SetActive(false);
     }
 }
