@@ -60,8 +60,7 @@ public class CreateItemMenu : MonoBehaviour
 
             if ((item.MaterialAItem == Aitem.Item && item.MaterialBItem == Bitem.Item)
                 || (item.MaterialAItem == Bitem.Item && item.MaterialBItem == Aitem.Item))
-            {
-                //素材と選択アイテムが等しい時
+            {//素材と選択アイテムが等しい時
 
                 Debug.Log("itemCreate");
                 
@@ -82,14 +81,11 @@ public class CreateItemMenu : MonoBehaviour
                 //アイテム削除
 
                 StartCoroutine(CraftSE(true));
-                //成功SE
-
                 return;
 
             }
         }
         StartCoroutine(CraftSE(false));
-        //失敗SE
 
         Debug.Log("失敗");
         return;
@@ -116,17 +112,15 @@ public class CreateItemMenu : MonoBehaviour
     public void SetCreateItem(Item item)
     {
         Debug.Log("item" + item);
-
+        //空の場合、アイテムを設定
         if (Aitem.Item == null)
         {
-            //空の場合、アイテムを設定
             Aitem.Initializae(item, null);
             return;
         }
-
+        //既にある場合は削除
         if(Aitem.Item == item)
         {
-            //既にある場合は削除
             Aitem.RemoveDetail();
             return;
         }

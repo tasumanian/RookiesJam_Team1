@@ -3,34 +3,30 @@ using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
-    public static void AddItem(Item item) //アイテムのついか
+    public static void AddItem(Item item)
     {
-
-        PlayerPrefs.SetInt("I" + item.Identifier,1);
         //1は所持していることを表す
+        PlayerPrefs.SetInt(item.Identifier,1);
     }
-    public static void RemoveItem(Item item)//アイテムの削除
+    public static void RemoveItem(Item item)
     {
-
-        PlayerPrefs.DeleteKey("I" + item.Identifier);
         //アイテムを削除
+        PlayerPrefs.DeleteKey(item.Identifier);
     }
     public static void SaveProgress(int progress)
     {
-        
-        PlayerPrefs.SetInt("P" + progress.ToString(), 1);
         //進捗状況を保存
+        PlayerPrefs.SetInt("P" + progress.ToString(), 1);
     }
     public static void MemoSave(string memo)
     {
-    
+        //メモ帳を保存
         Debug.Log("メモ帳を保存しました" + memo);
         PlayerPrefs.SetString("Memo", memo);
-        //メモ帳を保存
     }
-    public static void CheckIvent(Ivent ivent) //イベントが実行されたら、記録
+    public static void CheckIvent(Ivent ivent)
     {
-        
+        //1は所持していることを表す
         PlayerPrefs.SetInt("A" + ivent.Identifier, 1);
     }
     public static void Initialize()
