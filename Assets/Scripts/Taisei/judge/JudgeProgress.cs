@@ -54,12 +54,25 @@ public class JudgeProgress : MonoBehaviour
 
         if (State == JudgeState.Answered)
         {
+
+            //こいつが呼ばれてない
             DebateStart();
+            
             State = JudgeState.NotReady;
         }
 
         if (State == JudgeState.Start)
         {
+            if (nowProgress > debateList.Count -1)
+            {
+                //討論が終了したら
+
+                dialog.TextListSet(contexts, "執事長");
+                State = JudgeState.End;
+                //終了時用のテキストを表示
+                return;
+            }
+
             //actionに応じて表示
             if (debateList[nowProgress].ActionType == DebateAction.choice)
             { //4択の場合、ボタンの表示
@@ -88,10 +101,11 @@ public class JudgeProgress : MonoBehaviour
     }
     public void DebateStart() //privateからpublicに変更しました。
     {
-        if(nowProgress >= debateList.Count)
-        {//討論が終了したら
+        if(nowProgress > debateList.Count -1)
+        {
+            //討論が終了したら
 
-            dialog.TextListSet(contexts, "");
+            dialog.TextListSet(contexts, "執事長");
             State = JudgeState.End;
             //終了時用のテキストを表示
             return;
@@ -176,6 +190,7 @@ public class JudgeProgress : MonoBehaviour
     {
         nowProgress++;
         State = JudgeState.Start;
+        DebateStart();
         //次の討論へ
     }
 }
