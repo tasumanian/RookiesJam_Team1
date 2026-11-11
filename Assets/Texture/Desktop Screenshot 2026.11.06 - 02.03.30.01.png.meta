@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: a001534872cb3624ba77a8dfe5034ce5
+guid: 4298579c825b7a64da579ee443d74bfc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2689137371152336306
-    second: RookiesJam_Team1 - MainScene - Windows, Mac, Linux - Unity 6.0 (6000.0.72f1)_
-      _DX11_ 2026_10_06 11_49_51_0
+      213: 2918642309295399597
+    second: Desktop Screenshot 2026.11.06 - 02.03.30.01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,14 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RookiesJam_Team1 - MainScene - Windows, Mac, Linux - Unity 6.0 (6000.0.72f1)_
-        _DX11_ 2026_10_06 11_49_51_0
+      name: Desktop Screenshot 2026.11.06 - 02.03.30.01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1689
-        height: 926
+        width: 1556
+        height: 894
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b543cff03cb15520800000000000000
-      internalID: 2689137371152336306
+      spriteID: da26af777b9118820800000000000000
+      internalID: 2918642309295399597
       vertices: []
       indices: 
       edges: []
@@ -137,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RookiesJam_Team1 - MainScene - Windows, Mac, Linux - Unity 6.0 (6000.0.72f1)_ _DX11_ 2026_10_06 11_49_51_0: 2689137371152336306
+      Desktop Screenshot 2026.11.06 - 02.03.30.01_0: 2918642309295399597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

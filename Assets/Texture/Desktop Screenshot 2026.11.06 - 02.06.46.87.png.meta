@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 66bbd97f9b9b09d49bbafcefe78c6aa9
+guid: 50944c6c7b9aca54ea3ad9e21b1c7d2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 565562532850880277
-    second: Meshy_AI_thinking_mind_ui_icon (1)_0
+      213: -5789425908246180445
+    second: Desktop Screenshot 2026.11.06 - 02.06.46.87_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meshy_AI_thinking_mind_ui_icon (1)_0
+      name: Desktop Screenshot 2026.11.06 - 02.06.46.87_0
       rect:
         serializedVersion: 2
-        x: 165
-        y: 161
-        width: 693
-        height: 698
+        x: 0
+        y: 0
+        width: 1564
+        height: 891
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51fc8dc802849d700800000000000000
-      internalID: 565562532850880277
+      spriteID: 3ad0b856fc3d7afa0800000000000000
+      internalID: -5789425908246180445
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Meshy_AI_thinking_mind_ui_icon (1)_0: 565562532850880277
+      Desktop Screenshot 2026.11.06 - 02.06.46.87_0: -5789425908246180445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

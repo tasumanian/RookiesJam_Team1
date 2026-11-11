@@ -41,8 +41,6 @@ public class PickUpIventer : MonoBehaviour , IPointerClickHandler
     }
     public void ActionIvent()
     {
-        SaveData.CheckIvent(ivent);
-        //イベント終了をセーブ
 
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
         backPack.AddItem(ivent.GetItem);
@@ -52,6 +50,9 @@ public class PickUpIventer : MonoBehaviour , IPointerClickHandler
 
         dialog.TextListSet(ivent.Content,ivent.Speaker);
         //ダイアログにテキストを入力
+
+        SaveData.CheckIvent(ivent);
+        //イベント終了をセーブ
 
         gameObject.SetActive(false);
         //非表示化

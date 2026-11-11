@@ -75,8 +75,8 @@ public class JudgeProgress : MonoBehaviour
 
             //actionに応じて表示
             if (debateList[nowProgress].ActionType == DebateAction.choice)
-            { 
-                //4択の場合、ボタンの表示
+            { //4択の場合、ボタンの表示
+
                 ButtonPopup();
             }
             else //アイテム選択の場合、ボタンの非表示化
@@ -90,7 +90,7 @@ public class JudgeProgress : MonoBehaviour
                 //上部テキストの表示
             }
             State = JudgeState.NotReady;
-            //Stateを待機に
+
         }
         if (State == JudgeState.End)
         {
@@ -110,9 +110,8 @@ public class JudgeProgress : MonoBehaviour
             //終了時用のテキストを表示
             return;
         }
-        
-        dialog.TextSet(debateList[nowProgress].Statement, debateList[nowProgress].Speaker);
         //相手の供述を表示
+        dialog.TextSet(debateList[nowProgress].Statement, debateList[nowProgress].Speaker);
 
         State = JudgeState.Start;
         //フラグを更新

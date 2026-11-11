@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a380c8c180ea4d64fb0e2790568e5056
+guid: f4c248479bb94c749a5463d65c722eea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5436030644925555466
-    second: Meshy_AI_tutorial_arrow_icon.png_nobg_0
+      213: 4291508937777201572
+    second: Desktop Screenshot 2026.11.06 - 02.06.46.87 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meshy_AI_tutorial_arrow_icon.png_nobg_0
+      name: Desktop Screenshot 2026.11.06 - 02.06.46.87 1_0
       rect:
         serializedVersion: 2
-        x: 371
+        x: 0
         y: 0
-        width: 653
-        height: 744
+        width: 1564
+        height: 891
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a03eceaf119a07b40800000000000000
-      internalID: 5436030644925555466
+      spriteID: 4a1cf9a34a08e8b30800000000000000
+      internalID: 4291508937777201572
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Meshy_AI_tutorial_arrow_icon.png_nobg_0: 5436030644925555466
+      Desktop Screenshot 2026.11.06 - 02.06.46.87 1_0: 4291508937777201572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

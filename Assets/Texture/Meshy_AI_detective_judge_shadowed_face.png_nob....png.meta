@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f2a19e7f82342ef4394e0405b73cadeb
+guid: 13e1d85d958f8a64f868ae8e8df526b9
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,7 +103,7 @@ TextureImporter:
       name: Meshy_AI_detective_judge_shadowed_face.png_nob..._0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 301
         y: 0
         width: 723
         height: 1014

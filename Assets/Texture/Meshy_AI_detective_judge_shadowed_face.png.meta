@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: cbc224e936237fe459b195f2b2383aaf
+guid: cbfef1f3e57d24949a655be1c73a7041
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7302198856681543141
-    second: RookiesJam_Team1 - MainScene - Windows, Mac, Linux - Unity 6.0 (6000.0.72f1)_
-      _DX11_ 2026_10_06 11_49_11_0
+      213: -4949933666113131398
+    second: Meshy_AI_detective_judge_shadowed_face_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,14 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RookiesJam_Team1 - MainScene - Windows, Mac, Linux - Unity 6.0 (6000.0.72f1)_
-        _DX11_ 2026_10_06 11_49_11_0
+      name: Meshy_AI_detective_judge_shadowed_face_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1690
-        height: 932
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1aab3c14d069aa90800000000000000
-      internalID: -7302198856681543141
+      spriteID: a7c64997e8d4e4bb0800000000000000
+      internalID: -4949933666113131398
       vertices: []
       indices: 
       edges: []
@@ -137,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RookiesJam_Team1 - MainScene - Windows, Mac, Linux - Unity 6.0 (6000.0.72f1)_ _DX11_ 2026_10_06 11_49_11_0: -7302198856681543141
+      Meshy_AI_detective_judge_shadowed_face_0: -4949933666113131398
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
