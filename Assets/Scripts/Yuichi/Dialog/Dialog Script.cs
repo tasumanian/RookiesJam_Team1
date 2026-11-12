@@ -25,13 +25,15 @@ public class Dialog : MonoBehaviour
 
     [SerializeField] private List<string> speakerNames = new List<string>();
     // セリフに合わせて自動で引き出しが増える名前の箱。
-
+    [SerializeField]
     private int currentTextIndex = 0;
     // 今何番目のセリフを読んでいるかを数えるカウンター。
     private float msgSpeed = 0.1f;
     // 文字が出るスピード（0.1秒）。
+    [SerializeField]
     private bool isTextComplete = false;
     // 文字が出終わった状態にするためのスイッチ。
+    [SerializeField]
     private bool isEnd = false;
     public bool IsEnd
     {
@@ -49,6 +51,11 @@ public class Dialog : MonoBehaviour
 
     void Update()
     {
+        if(isEnd && currentTextIndex < msgTexts.Count)
+        {
+            Debug.Log("Ahoge");
+            StartNewDialog();
+        }
         if (isTextComplete == false)
         // もし文字が流れている途中なら。
         {
@@ -76,15 +83,16 @@ public class Dialog : MonoBehaviour
         else
         // すでに文字が出終わっているなら。
         {
-            if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+            if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame && !isEnd)
             // もしマウスの左クリックが押されたら。
             {
-                currentTextIndex++;
                 // カウンターを1つ進めて、次の文章の番号にする。
 
-                if (currentTextIndex < msgTexts.Count)
+                if (currentTextIndex + 1 < msgTexts.Count)
                 // もし次の文章がまだリストに残っているなら。
                 {
+                    currentTextIndex++;
+                    Debug.Log("Bhoge");
                     StartNewDialog();
                     // 次の文章を表示する処理をもう一度おこなう。
                 }
@@ -112,7 +120,10 @@ public class Dialog : MonoBehaviour
                         // 逆三角ボタンを隠す。
                         skipGuideScript.ShowEndGuide();
                         // 案内表示を完全に消してもらう。
+                        currentTextIndex++;
+
                         isEnd = true;
+
                     }
                 }
             }
@@ -122,16 +133,15 @@ public class Dialog : MonoBehaviour
     public void StartNewDialog()
     {
         if (msgTexts.Count == 0) return;
-        // リストの中身が空っぽなら、エラーを防ぐために処理をスルーする。
-        
-            isTextComplete = false;
-            // 新しい文章なので、まだ出終わっていない状態にする。
-            DialogText.text = "";
-            // 画面の文字を一度リセットして空にする。
-            button.SetActive(false);
-            // 逆三角ボタンを新しく隠し直す設定。
+        // リストの中身が空っぽなら、エラーを防ぐために処理をスルーする。            
+        isTextComplete = false;
+        // 新しい文章なので、まだ出終わっていない状態にする。
+        DialogText.text = "";
+        // 画面の文字を一度リセットして空にする。
+        button.SetActive(false);
+        // 逆三角ボタンを新しく隠し直す設定。
 
-            // speakerNamesがnullの場合、要素数チェック時のNullReferenceExceptionを防ぐために初期化する。
+        // speakerNamesがnullの場合、要素数チェック時のNullReferenceExceptionを防ぐために初期化する。
         
         if (speakerNames == null)
         {
@@ -196,9 +206,9 @@ public class Dialog : MonoBehaviour
     public void TextSet(string text , string speaker)
     // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
     {
-        isEnd = false;
+        //isEnd = false;
 
-        StopAllCoroutines();
+        //StopAllCoroutines();
         // 動いているタイピング演出（コルーチン）をすべて停止する。
 
         msgTexts.Add(text);
@@ -207,18 +217,18 @@ public class Dialog : MonoBehaviour
         speakerNames.Add(speaker);
         // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
 
-        currentTextIndex = msgTexts.Count - 1;
+        //currentTextIndex = msgTexts.Count - 1;
         // カウンターを最後尾の要素番号に設定。
 
-        StartNewDialog();
+        //StartNewDialog();
         // 上書きした文章で、新しく会話の演出をスタートさせる。
     }
     public void TextListSet(string[] texts, string speaker)
     // 外部から新しいセリフを流し込んで、新しく再生し直す機能。
     {
-        isEnd = false;
+        //isEnd = false;
 
-        StopAllCoroutines();
+        //StopAllCoroutines();
         // 動いているタイピング演出（コルーチン）をすべて停止する。
         foreach (string text in texts)
         {
@@ -232,10 +242,10 @@ public class Dialog : MonoBehaviour
         }
         // 空の文字列を名前用リストの末尾に追加し、セリフと名前の数を揃える。
 
-        currentTextIndex = msgTexts.Count - 1 - (texts.Length -1);
+        //currentTextIndex = msgTexts.Count - 1 - (texts.Length -1);
         // カウンターを最後尾の要素番号に設定。
 
-        StartNewDialog();
+        //StartNewDialog();
         // 上書きした文章で、新しく会話の演出をスタートさせる。
     }
 }

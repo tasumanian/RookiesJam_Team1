@@ -7856,7 +7856,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1224965558
@@ -8617,8 +8617,12 @@ MonoBehaviour:
   button: {fileID: 333567983}
   skipGuideScript: {fileID: 129088258}
   NameText: {fileID: 1051396006}
-  msgTexts: []
+  msgTexts:
+  - dummy
   speakerNames: []
+  currentTextIndex: 0
+  isTextComplete: 1
+  isEnd: 1
 --- !u!114 &1416237620
 MonoBehaviour:
   m_ObjectHideFlags: 0
