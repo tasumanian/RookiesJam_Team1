@@ -43,16 +43,16 @@ public class PickUpIventer : MonoBehaviour , IPointerClickHandler
     {
 
         Debug.Log(ivent.GetItem.ItemName + "をゲット");
-        backPack.AddItem(ivent.GetItem);
-        //イベントに設定されたアイテムを入手
 
-        soundManager.PlaySE(SE);
-
-        dialog.TextListSet(ivent.Content,ivent.Speaker);
+        dialog.TextListSet(ivent.Content, ivent.Speaker);
         //ダイアログにテキストを入力
 
         SaveData.CheckIvent(ivent);
         //イベント終了をセーブ
+        backPack.AddItem(ivent.GetItem);
+        //イベントに設定されたアイテムを入手
+
+        soundManager.PlaySE(SE);
 
         gameObject.SetActive(false);
         //非表示化
