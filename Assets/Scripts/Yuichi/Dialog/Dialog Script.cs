@@ -39,7 +39,8 @@ public class Dialog : MonoBehaviour
     {
         get { return isEnd; }
     }
-
+    [SerializeField]
+    private TextMeshProUGUI logText;
     void Start()
     {
         currentTextIndex = 0;
@@ -157,6 +158,7 @@ public class Dialog : MonoBehaviour
         else
         {
             NameText.text = "";
+            speakerNames.Add("");
             // 名前が空っぽなら、表示られないようにする。
         }
 
@@ -247,5 +249,20 @@ public class Dialog : MonoBehaviour
 
         //StartNewDialog();
         // 上書きした文章で、新しく会話の演出をスタートさせる。
+    }
+    public void LoadLog()
+    {
+        logText.text = "";
+        for (int count = msgTexts.Count-1; count > 0; count--)
+        {
+            if(count < speakerNames.Count)
+            {
+                logText.text += speakerNames[count].PadRight(5);
+            }else
+            {
+                logText.text += " ".PadRight(5);
+            }
+            logText.text += msgTexts[count] + "\n";
+        }
     }
 }

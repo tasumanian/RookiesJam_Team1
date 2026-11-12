@@ -35,6 +35,17 @@ public class BackPack : MonoBehaviour
         BackPackLoad();
         //バックパックのロード
     }
+    public bool HasItem(Item item)
+    {
+        foreach(Item backpackItem in itemList)
+        {
+            if(backpackItem == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // Update is called once per frame
     public void BackPackLoad() //バックパックのロード
