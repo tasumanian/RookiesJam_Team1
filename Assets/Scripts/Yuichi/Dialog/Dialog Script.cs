@@ -253,7 +253,7 @@ public class Dialog : MonoBehaviour
     public void LoadLog()
     {
         logText.text = "";
-        for (int count = msgTexts.Count-1; count > 0; count--)
+        for (int count = 0; count < msgTexts.Count; count++)
         {
             if(count < speakerNames.Count)
             {
