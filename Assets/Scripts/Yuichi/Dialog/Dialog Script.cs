@@ -171,12 +171,11 @@ public class Dialog : MonoBehaviour
     public void SetFailureText(string failureMessage)
     {
         // ダイアログをクリアして、失敗セリフを挿入
-        msgTexts.Clear();
         msgTexts.Add(failureMessage);
-        currentTextIndex = 0;
+        currentTextIndex++;
 
         // 失敗した時の名前枠を固定
-        NameText.text = "わたし";
+        speakerNames.Add("わたし");
 
         // 3. 共有してもらった StartNewDialog の後半の処理を安全に実行
         isTextComplete = false;
