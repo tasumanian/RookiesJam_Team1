@@ -45,6 +45,7 @@ public class JudgeProgress : MonoBehaviour
     void Start()
     {
         nowProgress = 0;
+        Debug.Log("start");
         DebateStart();
     }
     private void FixedUpdate()
@@ -110,6 +111,7 @@ public class JudgeProgress : MonoBehaviour
             //終了時用のテキストを表示
             return;
         }
+        Debug.Log("startDivate");
         //相手の供述を表示
         dialog.TextSet(debateList[nowProgress].Statement, debateList[nowProgress].Speaker);
 
@@ -153,7 +155,8 @@ public class JudgeProgress : MonoBehaviour
             //失敗したときダイアログスクリプトに処理を飛ばす
             if (dialog != null)
             {
-                dialog.SetFailureText("私はこの選択で正しいのか……？");
+                dialog.TextSet("私はこの選択で正しいのか……？","あなた");
+                //dialog.SetFailureText("私はこの選択で正しいのか……？");
             }
 
             // 元の質問に戻す関数
@@ -179,7 +182,7 @@ public class JudgeProgress : MonoBehaviour
         {
             if(dialog != null)
             {
-                dialog.SetFailureText("私はこの選択で正しいのか……？");
+                dialog.TextSet("私はこの選択で正しいのか……？", "あなた");
             }
 
             // 元の質問に戻す
