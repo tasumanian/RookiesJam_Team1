@@ -8,7 +8,7 @@ public class CreateItemMenu : MonoBehaviour
     private ItemUI Aitem; 
     //選択アイテムA
     [SerializeField]
-    private ItemUI Bitem;　
+    private ItemUI Bitem;
     //選択アイテムB
     [SerializeField]
     private ItemUI CreatedItem;　

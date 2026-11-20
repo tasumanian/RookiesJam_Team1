@@ -42,6 +42,9 @@ public class Narrative : MonoBehaviour
     [SerializeField]
     private TMP_FontAsset font;
     //変更用font
+    [SerializeField]
+    private List<GameObject> panels = new List<GameObject>();
+    private int panelIndex = 0;
 
     private int currentIndex = 0;
     //contextsのindex
@@ -171,5 +174,18 @@ public class Narrative : MonoBehaviour
         dialog.TextSet("調査を始めよう", "");
         soundManager.PlayBGM(1);
     }
+    public void NextPanel()
+    {
+        panels[panelIndex].SetActive(false);
+        panelIndex++;
+        if (panelIndex < panels.Count)
+        {
+            panels[panelIndex].SetActive(true);
+        }else
+        {
 
+            EndTutorial();
+        }
+
+    }
 }

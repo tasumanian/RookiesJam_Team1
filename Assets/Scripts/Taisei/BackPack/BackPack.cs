@@ -111,9 +111,7 @@ public class BackPack : MonoBehaviour
             //合成モード時はクラフトメニューを開く
 
             createMenu.SetCreateItem(item);
-            detailMenu.SetActive(false);
-
-            return;
+            //detailMenu.SetActive(false);
         }
         if (detailMenu == null) return;
 
@@ -134,5 +132,20 @@ public class BackPack : MonoBehaviour
 
         createMenu.gameObject.SetActive(isCraft);
         //表示変更
+        if(isCraft)
+        {
+           RectTransform rectTransform = detailMenu.GetComponent<RectTransform>();
+
+            Vector2 pos = rectTransform.anchoredPosition;
+            pos.x -= 680f;
+            rectTransform.anchoredPosition = pos;
+        }else
+        {
+            RectTransform rectTransform = detailMenu.GetComponent<RectTransform>();
+
+            Vector2 pos = rectTransform.anchoredPosition;
+            pos.x += 680f;
+            rectTransform.anchoredPosition = pos;
+        }
     }
 }
