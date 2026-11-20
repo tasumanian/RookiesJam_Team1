@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a35bd3447dba3419c915bbeb846c6d, type: 3}
+  m_Name: shokuji
+  m_EditorClassIdentifier: 
+  identifier: 24
+  content:
+  - "\u300C\u663C\u98DF\u306E\u6E96\u5099\u300D\n\u300C\u65E6\u90A3\u69D8\u304C\u4EA1\u304F\u306A\u3089\u308C\u305F\u6642\u306E\u663C\u98DF\u3092\u8AB0\u304C\u6E96\u5099\u3057\u305F\u304B\u3067\u3059\u304B\uFF1F\n\u78BA\u304B\u57F7\u4E8B\u9577\u3060\u3063\u305F\u3068\u601D\u3044\u307E\u3059\u300D"
+  speaker: "\u5F93\u8005"
+  getItem: {fileID: 11400000, guid: c1be51c2f054b7b45beb90c1d866293a, type: 2}
+  terms: {fileID: 11400000, guid: 8cf46108968c0d7449e884e60b603173, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ca0c88b344f2946be2bcfc64b439a0, type: 3}
+  m_Name: shokuji
+  m_EditorClassIdentifier: 
+  needItems: []
+  needIvents:
+  - {fileID: 11400000, guid: 8e45cc3eb2571774f8d53dcc4851500a, type: 2}
+  - {fileID: 11400000, guid: 072b0a3c95613e54f923fbbcd2c0c4b3, type: 2}
+  context: "\u30AD\u30C3\u30C1\u30F3\u306B\u3042\u3063\u305F\u3053\u3068\u3084\u88AB\u5BB3\u8005\u306E\u6B7B\u56E0\u3001\u88AB\u5BB3\u8005\u306E\u72B6\u6CC1\u304B\u3089\u5BDF\u3059\u308B\u306B\u663C\u98DF\u306B\u6BD2\u3092\u76DB\u3089\u308C\u305F\u306E\u3060\u308D\u3046\u3002\u663C\u98DF\u3092\u6E96\u5099\u3057\u305F\u306E\u304C\u8AB0\u304B\u306B\u3064\u3044\u3066\u5F93\u8005\u306B\u805E\u3044\u3066\u307F\u3088\u3046\u3002"

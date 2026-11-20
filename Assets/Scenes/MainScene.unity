@@ -346,7 +346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u88AB\u5BB3\u8005\u3092\u96C6\u3081\u308B"
+  m_text: "\u5BB9\u7591\u8005\u3092\u96C6\u3081\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0eb4af43ad00eef4783c78f74638ece2, type: 2}
   m_sharedMaterial: {fileID: -4162160759752132450, guid: 0eb4af43ad00eef4783c78f74638ece2, type: 2}
@@ -4276,6 +4276,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ae6fa8526efc09146a8ca2d6b561e352, type: 2}
   - {fileID: 11400000, guid: 1076cc5e7593f4a4cb60ebb909bf6460, type: 2}
   - {fileID: 11400000, guid: 933fdc7b2d3bf8748bd8515547da72d0, type: 2}
+  - {fileID: 11400000, guid: 8cf46108968c0d7449e884e60b603173, type: 2}
   - {fileID: 11400000, guid: 933e9cdcc6f6fcc44ba6ca6d02a606d9, type: 2}
   ariaMove: {fileID: 664070374}
   dialog: {fileID: 1416237619}
