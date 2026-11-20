@@ -3918,6 +3918,44 @@ MonoBehaviour:
   BGMClips:
   - {fileID: 8300000, guid: ccf37250d4a50814789e25f19250a1be, type: 3}
   - {fileID: 0}
+  rollBack:
+    m_Name: Roll Back
+    m_Id: e43e9fa3-c011-4453-9b11-04a25b1a53e7
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: ctrl
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 13f548ee-9d69-4873-a151-e502a39d727d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: upArrow
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: caf56182-2d1b-458b-8231-513c59a2237b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 8a072968-adc1-4f84-934a-32ef6c75e06a
+      m_Path: <Keyboard>/leftCtrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ctrl
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 9a047d81-cb6e-4c77-b4c9-0f768826fc72
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: upArrow
+      m_Flags: 0
 --- !u!1 &1375392622
 GameObject:
   m_ObjectHideFlags: 0

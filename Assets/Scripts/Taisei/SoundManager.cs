@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,7 +13,26 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] BGMClips;
 
+    [SerializeField]
+    private InputActionMap rollBack;
 
+    bool isBack = false;
+    private void Start()
+    {
+        foreach(InputAction action in rollBack.actions)
+        {
+            action.Enable();
+        }
+    }
+    private void Update()
+    {
+        if (rollBack.actions[0].IsPressed() && rollBack.actions[1].IsPressed() && isBack == false)
+        {
+            isBack = true;
+            Debug.Log("gotitle");
+            SceneManager.LoadScene("TitleScene");
+        }
+    }
     public  void PlaySE(AudioClip clip)
     {
         SESource.PlayOneShot(clip);

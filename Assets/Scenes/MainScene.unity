@@ -1153,6 +1153,44 @@ MonoBehaviour:
   BGMClips:
   - {fileID: 8300000, guid: 7659014150895c04fb5d396cd1e9e941, type: 3}
   - {fileID: 8300000, guid: bf8a2be0b51587e4489bdae0e2ecce73, type: 3}
+  rollBack:
+    m_Name: Roll Back
+    m_Id: c7ae06d4-e179-4b21-afc8-b1894595b50c
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: ctrl
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 2657bf37-bc01-491c-bf8c-32c649c5468a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: upArrow
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 70adaa6d-4832-4410-8d21-0d6ae2953e68
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 72251074-d2d8-4e75-a411-cbb8ced4d55b
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: upArrow
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b41f2777-e34c-4784-a994-d33f4b865d18
+      m_Path: <Keyboard>/leftCtrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ctrl
+      m_Flags: 0
 --- !u!4 &237783496
 Transform:
   m_ObjectHideFlags: 0
