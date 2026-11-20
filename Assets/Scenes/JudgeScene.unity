@@ -5924,6 +5924,43 @@ MonoBehaviour:
   SESource: {fileID: 1231745900}
   BGMSource: {fileID: 244117433}
   BGMClips: []
+    m_Name: Roll Back
+    m_Id: d3941e50-c604-4a52-bbfa-e0c19501f9ee
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: ctrl
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 860f041b-508d-42d3-bc58-04a56b47f12f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: upArrow
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: fd0afe80-2e7e-44f6-a2a0-5df339166753
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 26081304-b022-4d08-956b-bfe51e1d1fc8
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: upArrow
+      m_Flags: 0
+    - m_Name: 
+      m_Id: f565d6cf-121d-407f-859d-d2dc2388bffe
+      m_Path: <Keyboard>/leftCtrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ctrl
+      m_Flags: 0
 --- !u!4 &1910432025
 Transform:
   m_ObjectHideFlags: 0
