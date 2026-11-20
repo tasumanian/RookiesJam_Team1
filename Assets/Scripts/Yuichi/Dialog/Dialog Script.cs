@@ -62,7 +62,8 @@ public class Dialog : MonoBehaviour
         {
             isEnd = false;
 
-            if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
+            if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame ||
+                UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
             // もしスペースキーが押されたら。
             {
                 // 現在のインデックスがリストの範囲内かチェック
