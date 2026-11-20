@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ca0c88b344f2946be2bcfc64b439a0, type: 3}
   m_Name: mususko 1
   m_EditorClassIdentifier: 
-  needItems:
-  - {fileID: 11400000, guid: 0b62c76043aca8242a7a792f6b4c048f, type: 2}
-  needIvents: []
+  needItems: []
+  needIvents:
+  - {fileID: 11400000, guid: e0bceafbcd4a6594f9a082e66fedef73, type: 2}
   context: "\u3053\u306E\u5B9D\u77F3\u306B\u3064\u3044\u3066\u3001\u606F\u5B50\u306B\u8A71\u3092\u805E\u304D\u306B\u884C\u3053\u3046"
