@@ -18,4 +18,4 @@ MonoBehaviour:
   visual: {fileID: 4210626786328978904, guid: f6b30aea7baaea3498d3746afb1b4803, type: 3}
   attribute: 2
   materialAItem: {fileID: 11400000, guid: 6d3af38342e36da42a0f69941e40932c, type: 2}
-  materialBItem: {fileID: 11400000, guid: 0b62c76043aca8242a7a792f6b4c048f, type: 2}
+  materialBItem: {fileID: 11400000, guid: 623af74e21a6401499f515bff53bec69, type: 2}
