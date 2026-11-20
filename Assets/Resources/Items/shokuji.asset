@@ -15,7 +15,7 @@ MonoBehaviour:
   identifier: 29
   itemName: "\u98DF\u4E8B\u306B\u3064\u3044\u3066"
   info: "\u300C\u9928\u306E\u4E3B\u4EBA\u300D\u304C\u4EA1\u304F\u306A\u3063\u305F\u3068\u304D\u306E\u663C\u98DF\u3092\u7528\u610F\u3057\u305F\u306E\u306F\u57F7\u4E8B\u9577\u3002"
-  visual: {fileID: 0}
+  visual: {fileID: 3679522185760534119, guid: acdf97cf792558a458585069a88f8e54, type: 3}
   attribute: 1
   materialAItem: {fileID: 0}
   materialBItem: {fileID: 0}

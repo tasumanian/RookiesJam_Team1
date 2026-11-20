@@ -17,5 +17,5 @@ MonoBehaviour:
   actionType: 1
   choiceText: []
   answerChoice: 0
-  answerItem: {fileID: 11400000, guid: 48a88c8b8be6238448222c23eba174b5, type: 2}
+  answerItem: {fileID: 11400000, guid: c1be51c2f054b7b45beb90c1d866293a, type: 2}
   answerText: "\u88AB\u5BB3\u8005\u306E\u72B6\u6CC1\u304B\u3089\u6BD2\u3092\u6442\u53D6\u3057\u305F\u306E\u306F\u663C\u3054\u308D\n\u663C\u98DF\u3092\u7528\u610F\u3057\u305F\u306E\u306F\u3042\u306A\u305F\u3067\u3057\u305F\u306D\u3002"
